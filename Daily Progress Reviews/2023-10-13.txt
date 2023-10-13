@@ -2,6 +2,24 @@
 
 /* --------------------------------------------------------- */
 
+General Discussion:
+
+- Practice PHP using online tutorials
+- Design of the website should be uniform (or atleast similar) across all pages
+
+- Website Layout
+	- Home page (Heavily bootstrap)
+	- Register / Login page
+	- Members details page
+	- Toys Page
+	- Cart page (Make it drop down if there is time)
+	- Checkout page
+
+	Uniform header, search bar and footer for each page
+	The way to filter toys is by brand, category, age, price and rating
+
+/* --------------------------------------------------------- */
+
 
 1) What we have done since the last meeting
 
@@ -17,28 +35,29 @@ Zachary: N/A
 
 Christopher: 
 
--
+- Research toy store websites for inspiration.
 
-Michael: N/A
+Michael: 
 
--
+- Research toy store websites for inspiration.
+- Start HTML / Javascript for website.
 
-Zachary: N/A
+Zachary: 
 
--
+- Research toy store websites for inspiration.
+- Researching PHP
 
 /* --------------------------------------------------------- */
 
 3) Likely problems we may face 
 
-Christopher: 
+General Problems:
 
--
+- Lack of understanding of PHP. 
+- Difficulty remembering SQL languague and implementing a database
+
+Christopher: N/A
 
 Michael: N/A
 
--
-
 Zachary: N/A
-
--
