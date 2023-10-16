@@ -1,0 +1,55 @@
+Date 2023-10-16
+
+/* --------------------------------------------------------- */
+
+General Discussion:
+
+- Our focus should be on completing what is necessary for the initial workflow report that is due 2023-10-18.
+
+/* --------------------------------------------------------- */
+
+1) What we have done since the last meeting
+
+Christopher: N/A
+
+Michael: 
+
+- General Nav bar and footer implemented.
+
+Zachary: 
+
+- Researched PHP using online resources.
+
+/* --------------------------------------------------------- */
+
+2) What we plan to do today
+
+Christopher: N/A
+
+Michael: 
+
+- Work on creating the wireframe and website design.
+
+Zachary: 
+
+- Work on creating the entity relationship diagram
+
+/* --------------------------------------------------------- */
+
+3) Likely problems we may face 
+
+General Problems:
+
+- N/A
+
+Christopher: 
+
+- N/A
+
+Michael: 
+
+- Remembering how to use figma to create the design.
+
+Zachary: 
+
+- Remembering how to make an entity relationship diagram.
