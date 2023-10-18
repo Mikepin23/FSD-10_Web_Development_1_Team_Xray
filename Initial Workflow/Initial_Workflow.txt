@@ -1,0 +1,18 @@
+Initial Workflow
+
+by: Michael Pinsonneault and Zachary McRae
+
+Wireframe / Design:
+
+Figma was used to design the wireframe for our website. It must be noted the the Toys 'R' Us website was used as inspiration. We will create a navigation bar and footer that will remain constant on every page created.
+
+We want to have pages to separate the toys by their categories, brands, top toys and deals. We would also like to have separate pages for logging in, signing up and displaying your cart.
+
+The pages will not have a lot of text. Mostly images or cards made through bootstrap to display pictures of the toys and their prices.
+
+No colours are applied in our images provided because it is strictly a wireframe, but we are leaning towards a light blue and light yellow colour combination. Light blue being applied to the nav bar and footer and light yellow for the buttons.
+
+Since it is a toy website, we are leaning towards a more childish type of font. 
+ 
+
+E/R Diagram:
