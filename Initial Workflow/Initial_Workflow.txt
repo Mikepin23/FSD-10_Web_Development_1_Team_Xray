@@ -16,3 +16,7 @@ Since it is a toy website, we are leaning towards a more childish type of font.
  
 
 E/R Diagram:
+
+Drawio was used to design the database structure. We decided to use 4 tables to eliminate redundancy and abide by the 3rd normal form for database structure. The First table is for customer information, then there's a table for 
+
+product information, the 3rd table is for order ID's and the last table is for each item in said order. This structure should maximize flexability while ensuring normalization and data integrity.
