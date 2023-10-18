@@ -1,0 +1,49 @@
+2023-10-18
+
+/* --------------------------------------------------------- */
+
+General Discussion:
+
+- 
+
+/* --------------------------------------------------------- */
+
+1) What we have done since the last meeting
+
+Michael: 
+
+- Made the Wireframe for the initial workflow.
+
+Zachary: 
+
+- Made the E/R Diagram for the initial workflow.
+
+/* --------------------------------------------------------- */
+
+2) What we plan to do today
+
+Michael: 
+
+- Finish the initial workflow and submit.
+- Work on navigation bar and footer.
+
+Zachary: 
+
+- Finish the initial workflow and submit.
+- Start the database.
+
+/* --------------------------------------------------------- */
+
+3) Likely problems we may face 
+
+General Problems:
+
+- N/A
+
+Michael: 
+
+- N/A
+
+Zachary: 
+
+- Getting reacquainted with SQL.
