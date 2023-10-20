@@ -1,4 +1,4 @@
-Date YYYY-MM-DD
+2023-10-20
 
 /* --------------------------------------------------------- */
 
@@ -12,7 +12,7 @@ General Discussion:
 
 Michael: 
 
--
+- Almost completed a header, navigation bar and footer that will be used for each page.
 
 Zachary: 
 
@@ -24,7 +24,7 @@ Zachary:
 
 Michael: 
 
--
+- Complete the header, navigation bar and footer for the website. Start developing the cards that will be used for the categories and brands pages. Also if possible develop the forms for the login and sign up pages.
 
 Zachary: 
 
@@ -40,7 +40,7 @@ General Problems:
 
 Michael: 
 
--
+- Trial and error to develop an aesthetic page. Constantly applying different tags and css.
 
 Zachary: 
 
