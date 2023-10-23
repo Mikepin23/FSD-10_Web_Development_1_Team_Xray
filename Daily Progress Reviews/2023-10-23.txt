@@ -4,7 +4,8 @@
 
 General Discussion:
 
-- 
+- New Logo for the site. 
+- Database structure.
 
 /* --------------------------------------------------------- */
 
@@ -12,11 +13,11 @@ General Discussion:
 
 Michael: 
 
--
+- Finished the header and footer. Started the create account page. 
 
 Zachary: 
 
--
+- Created the company logo. Thought about the database structure.
 
 /* --------------------------------------------------------- */
 
@@ -24,24 +25,20 @@ Zachary:
 
 Michael: 
 
--
+- Work on finishing the login page. Work on the cards for the categories and brands page. If time start the cart.
 
 Zachary: 
 
--
+- Design the database.
 
 /* --------------------------------------------------------- */
 
 3) Likely problems we may face 
 
-General Problems:
-
--
-
 Michael: 
 
--
+- Trouble making the page responsive. Having multiple css files linked, may conflict with each other.
 
 Zachary: 
 
--
+- Ensuring data integrity. 
