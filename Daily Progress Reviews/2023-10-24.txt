@@ -1,0 +1,43 @@
+2023-10-24
+
+/* --------------------------------------------------------- */
+
+General Discussion:
+
+- 
+
+/* --------------------------------------------------------- */
+
+1) What we have done since the last meeting
+
+Michael: Have completed the forms for create account and login. Cards have been implemented for the brands and categories pages (Need refinement). CSS needs refinement accross all pages. Not aesthetic quite yet.
+
+-
+
+Zachary: 
+
+-
+
+/* --------------------------------------------------------- */
+
+2) What we plan to do today
+
+Michael: 
+
+- Continue with the website design. Hopefully start on the on the toys pages. Also work on improving the aesthetic.
+
+Zachary: 
+
+-
+
+/* --------------------------------------------------------- */
+
+3) Likely problems we may face 
+
+Michael: 
+
+- The last few days have been very similar. The design of the website is trial and error when coming to the aesthetics.
+
+Zachary: 
+
+-

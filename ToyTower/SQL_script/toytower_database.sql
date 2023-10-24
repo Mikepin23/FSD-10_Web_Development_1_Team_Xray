@@ -24,3 +24,10 @@ CREATE TABLE Login
 ;
 */
 
+CREATE TABLE Brands
+(
+	BrandID int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    BrandName varchar(50) NOT NULL
+)
+;
+
