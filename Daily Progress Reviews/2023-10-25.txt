@@ -1,0 +1,43 @@
+2023-10-25
+
+/* --------------------------------------------------------- */
+
+General Discussion:
+
+- Look more into Fat-Free framework. It definitely would help simplify creating the website.
+
+/* --------------------------------------------------------- */
+
+1) What we have done since the last meeting
+
+Michael: 
+
+- Worked on html and css.
+
+Zachary: 
+
+- Created the tables script for the database.
+
+/* --------------------------------------------------------- */
+
+2) What we plan to do today
+
+Michael: 
+
+- Work on the cart page.
+
+Zachary: 
+
+- Work on the homepage. Use a carousel with bootstrap.
+
+/* --------------------------------------------------------- */
+
+3) Likely problems we may face 
+
+Michael: 
+
+- The usual issue with the css.
+
+Zachary: 
+
+- Have not worked with bootstrap for a while. 
