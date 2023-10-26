@@ -1,0 +1,44 @@
+2023-10-26
+
+/* --------------------------------------------------------- */
+
+General Discussion:
+
+- Talked about aesthetics of the site. 
+
+/* --------------------------------------------------------- */
+
+1) What we have done since the last meeting
+
+Michael: 
+
+- Made a cart for the cart page.
+
+Zachary: 
+
+- Worked on home page. Created a carousel and age cards.
+
+/* --------------------------------------------------------- */
+
+2) What we plan to do today
+
+Michael:
+ 
+- Start the toys page
+- Try and start popuplating the database with toys. 
+
+Zachary: 
+
+- Continue on the homepage. 
+
+/* --------------------------------------------------------- */
+
+3) Likely problems we may face 
+
+Michael: 
+
+- The usual bootstrap and css issues. Also populating the database.
+
+Zachary: 
+
+- The usual bootstrap and css issues. 
