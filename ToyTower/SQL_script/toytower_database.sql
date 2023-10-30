@@ -23,21 +23,24 @@ CREATE TABLE Users -- Create account
 CREATE TABLE Brands 
 (
     BrandID int PRIMARY KEY NOT NULL AUTO_INCREMENT,
-    BrandName varchar(50) NOT NULL
+    BrandName varchar(50) NOT NULL,
+    BrandImage varchar(150) NOT NULL -- Path to Image
 )
 ;
 
 CREATE TABLE AgeRanges 
 (
     AgeRangeID int PRIMARY KEY NOT NULL AUTO_INCREMENT,
-    `Range` varchar(50) NOT NULL
+    `Range` varchar(50) NOT NULL,
+    AgeRangeImage varchar(150) NOT NULL -- Path to Image
 )
 ;
 
 CREATE TABLE Categories 
 (
     CategoryID int PRIMARY KEY NOT NULL AUTO_INCREMENT,
-    CategoryName varchar(50) NOT NULL
+    CategoryName varchar(50) NOT NULL,
+    CategoryImage varchar(150) NOT NULL -- Path to Image
 )
 ;
 
@@ -45,7 +48,9 @@ CREATE TABLE Toys
 (
 	ToysID int PRIMARY KEY NOT NULL AUTO_INCREMENT,
     ToyName varchar(50) NOT NULL,
-    Price DECIMAL(10, 2),
+    Price DECIMAL(10, 2) NOT NULL,
+    Stock int NOT NUll,
+    ToyImage varchar(150) NOT NULL, -- Path to Image
     BrandID int,
     AgeRangeID int,
     CategoryID int,
@@ -59,7 +64,7 @@ CREATE TABLE Toys
 CREATE TABLE Transactions 
 (
     OrderID INT,
-    CustomerID INT,
+    UserID INT,
     ProductID INT,
     Total DECIMAL(10, 2),
     PRIMARY KEY (OrderID),

@@ -21,14 +21,16 @@ VALUES
 ('5 - 7 years'),
 ('8 - 10 years'),
 ('11 - 12 years'),
-('13+ years')
+('13+ years'),
+('All Ages')
 ;
 
 INSERT INTO Categories (CategoryName)
 VALUES 
 ('Action Figures'),
 ('Learning'),
-('Kids Boods'),
+('Dolls'),
+('Kids Books'),
 ('Activity Games'),
 ('Sports'),
 ('Board Games'),
@@ -37,5 +39,13 @@ VALUES
 ('Vehicles'),
 ('Stuffed Animals'),
 ('Arts and Crafts'),
+('electronics'),
 ('Toddlers')
+;
+
+INSERT INTO Toys (ToyName, Price, Stock, BrandID, AgeRangeID, CategoryID)
+VALUES 
+('Batman', '', '', '', '', ''),
+('Action Figures', '', '', '', '', ''),
+
 ;
