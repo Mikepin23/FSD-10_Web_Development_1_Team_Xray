@@ -55,7 +55,7 @@ CREATE TABLE Toys
     AgeRangeID int,
     CategoryID int,
     FOREIGN KEY (BrandID) REFERENCES Brands(BrandID),
-    FOREIGN KEY (AgeRange) REFERENCES AgeRanges(AgeRangeID),
+    FOREIGN KEY (AgeRangeID) REFERENCES AgeRanges(AgeRangeID),
     FOREIGN KEY (CategoryID) REFERENCES Categories(CategoryID)
 )
 ;
@@ -65,7 +65,7 @@ CREATE TABLE Transactions
 (
     OrderID INT,
     UserID INT,
-    ProductID INT,
+    ProductID INT, -- not necessary
     Total DECIMAL(10, 2),
     PRIMARY KEY (OrderID),
     FOREIGN KEY (UserID) REFERENCES Users(UserID),
