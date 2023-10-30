@@ -3,6 +3,7 @@ CREATE DATABASE toytower
 ;
 */
 
+/* Switch to the database */
 USE toytower
 ;
 
@@ -15,19 +16,71 @@ CREATE TABLE Users -- Create account
     UserLN varchar(50) NOT NULL,
     UserEmail varchar(150) NOT NULL,
     Phone varchar(10) NOT NULL,
-    PostalCode varchar(7) NOT NULL
+    PostalCode char(6) NOT NULL
+)
+;
+
+CREATE TABLE Brands 
+(
+    BrandID int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    BrandName varchar(50) NOT NULL
+)
+;
+
+CREATE TABLE AgeRanges 
+(
+    AgeRangeID int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    `Range` varchar(50) NOT NULL
+)
+;
+
+CREATE TABLE Categories 
+(
+    CategoryID int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    CategoryName varchar(50) NOT NULL
+)
+;
+
+CREATE TABLE Toys 
+(
+	ToysID int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    ToyName varchar(50) NOT NULL,
+    Price DECIMAL(10, 2) NOT NULL,
+    Stock int NOT NULL, 
+    BrandID int,
+    AgeRangeID int,
+    CategoryID int,
+    FOREIGN KEY (BrandID) REFERENCES Brands(BrandID),
+    FOREIGN KEY (AgeRange) REFERENCES AgeRanges(AgeRangeID),
+    FOREIGN KEY (CategoryID) REFERENCES Categories(CategoryID)
 )
 ;
 
 /*
-CREATE TABLE Login
+CREATE TABLE Transactions 
+(
+    OrderID INT,
+    CustomerID INT,
+    ProductID INT,
+    Total DECIMAL(10, 2),
+    PRIMARY KEY (OrderID),
+    FOREIGN KEY (UserID) REFERENCES Users(UserID),
+    FOREIGN KEY (ProductID) REFERENCES Products(ProductID)
+)
+;
+
+CREATE TABLE OrderItems 
+(
+    OrderItemID INT,
+    OrderID INT,
+    ProductID INT,
+    Quantity INT,
+    Subtotal DECIMAL(10, 2),
+    PRIMARY KEY (OrderItemID),
+    FOREIGN KEY (OrderID) REFERENCES Transactions(OrderID),
+    FOREIGN KEY (ProductID) REFERENCES Products(ProductID)
+)
 ;
 */
 
-CREATE TABLE Brands
-(
-	BrandID int PRIMARY KEY NOT NULL AUTO_INCREMENT,
-    BrandName varchar(50) NOT NULL
-)
-;
 
