@@ -6,6 +6,7 @@
   font-family: "Pacifico", cursive;
   font-family: "Playpen Sans", cursive;
 }
+
 /* Background color of the header and footer */
 .bg-blue {
   background-color: rgb(140, 190, 255);
@@ -54,6 +55,7 @@
   align-items: flex-end;
   display: flex;
 }
+
 /*
 **
     icons
