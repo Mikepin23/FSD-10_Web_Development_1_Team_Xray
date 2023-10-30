@@ -45,8 +45,7 @@ CREATE TABLE Toys
 (
 	ToysID int PRIMARY KEY NOT NULL AUTO_INCREMENT,
     ToyName varchar(50) NOT NULL,
-    Price DECIMAL(10, 2) NOT NULL,
-    Stock int NOT NULL, 
+    Price DECIMAL(10, 2),
     BrandID int,
     AgeRangeID int,
     CategoryID int,
@@ -82,5 +81,8 @@ CREATE TABLE OrderItems
 )
 ;
 */
+
+
+
 
 
