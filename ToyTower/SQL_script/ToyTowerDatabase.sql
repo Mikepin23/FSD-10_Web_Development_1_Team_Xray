@@ -1,5 +1,3 @@
-/*
-
 CREATE TABLE Customers (
     CustomerID INT AUTO_INCREMENT,
     Address VARCHAR(255),
@@ -59,5 +57,3 @@ CREATE TABLE OrderItems (
     FOREIGN KEY (OrderID) REFERENCES Transactions(OrderID),
     FOREIGN KEY (ProductID) REFERENCES Products(ProductID)
 );
-
-*/
