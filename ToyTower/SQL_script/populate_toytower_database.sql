@@ -1,4 +1,4 @@
-INSERT INTO Brands ('BrandName', 'BrandImage')
+INSERT INTO Brands (BrandName, BrandImage)
 VALUES 
 ('Hasbro', '../Website/img/brands/hasbro.png'), 
 ('Barbie', '../Website/img/brands/barbie.png'), 
@@ -15,7 +15,7 @@ VALUES
 ('KidCentral', '../Website/img/brands/kidcentral.png')
 ;
 
-INSERT INTO AgeRanges ('Range', 'AgeRangeImage')
+INSERT INTO AgeRanges (`Range`, AgeRangeImage)
 VALUES 
 ('0 - 2 years', '../Website/img/ages/0-2.png'),
 ('3 - 4 years', '../Website/img/ages/3-4.png'),
@@ -26,7 +26,7 @@ VALUES
 -- ('All Ages')
 ;
 
-INSERT INTO Categories ('CategoryName', 'CategoryImage')
+INSERT INTO Categories (CategoryName, CategoryImage)
 VALUES 
 ('Action Figures', '../Website/img/categories/actionfigs.png'),
 ('Learning', '../Website/img/categories/educational.png'),
@@ -43,30 +43,30 @@ VALUES
 INSERT INTO Toys (ToyName, Price, Stock, ToyImage, BrandID, AgeRangeID, CategoryID)
 VALUES 
 ('Jurassic World: Dominion Mosasaurus Dinosaur Toy', 34.87, 82, '../Website/img/toys/64786820_1.jpg', 9, 4, 1),
-('Jurassic World: Dominion Sound Slashin Therizinosaurus Dinosaur Figure', '../Website/img/toys/D41E79C8_1.jpg', 52.99, 73, 9, 4, 1),
-('Marvel Legends Series Moon Knight, Marvel Comics, Marvel Legends Action Figures, 6 Inch', '../Website/img/toys/44CE6976_1.jpg', 35.99, 44, 3, 5, 1),
-('Marvel Spider-Man Titan Hero Series Spider-Man 12-Inch-Scale Action Figure', '../Website/img/toys/E4BA9AA7_1.jpg', 14.99, 52, 3, 5, 1),
-('Marvel Avengers Mech Strike Monster Hunters Monster Punch Thanos Toy, 9-Inch-Scale Deluxe Action Figure', '../Website/img/toys/5419DA81_1.jpg', 23.98, 12, 3, 5, 1), -- ^action figures
-('Play-Doh Super Color Pack of 12 Cans - R Exclusive', '../Website/img/toys/D426A9BF_1.jpg', 10.48, 31, 11, 2, 8),
-('Play-Doh Kitchen Creations Colorful Cafe Playset', '../Website/img/toys/1416BA01_1.jpg', 23.77, 12, 11, 3, 8),
-('Play-Doh Kitchen Creations Flip and Pancakes Playset 14-Piece Breakfast Toy', '../Website/img/toys/C4C2D814_1.jpg', 21.99, 24, 11, 3, 8),
-('Paw Patrol Pebble Painting Craft Set - R Exclusive', '../Website/img/toys/34ACB8F3_1.jpg', 8.47, 9, 7, 3, 8),
-('Paw Patrol Mosaic Pictures Craft Set - R Exclusive', '../Website/img/toys/A4F0B90E_1.jpg', 8.57, 23, 7, 3, 8), -- ^arts and crafts
-('Tonie - Moana - English Edition', '../Website/img/toys/3412DBF0_1.jpg', 24.99, 5, 4, 9),
-('Tonie - Paw Patrol - Chase - English Edition', '../Website/img/toys/E41EABC5_1.jpg', 24.99, 7, 4, 9),
-('Hulk Cable Guy Phone and Controller Holder', '../Website/img/toys/649DDACB_1.jpg', 29.99, 3, 5, 9),
-('Wolverine Cable Guy Phone and Controller Holder', '../Website/img/toys/F45799F2_1.jpg', 29.99, 3, 5, 9),
-('Playstation 4-Marvel''s Guardians Of The Galaxy', '../Website/img/toys/C46C18B9_1.jpg', 55.98, 3, 6, 9), -- ^electronics
-('Squishmallows 8" - Sonic the Hedgehog', '../Website/img/toys/44908954_1.jpg', 19.99, 10, 2, 7),
-('Squishmallows 8" - Shadow the Hedgehog', '../Website/img/toys/04F65BA8_1.jpg', 19.99, 10, 2, 7),
-('Squishmallows 8" - Tails', '../Website/img/toys/E4E94806_1.jpg', 19.99, 10, 2, 7),
-('Disney - Stitch Holiday Plush', '../Website/img/toys/045C185A_1.jpg', 24.99, 5, 2, 7),
-('Disney - Mickey Mouse Plush 17 inches', '../Website/img/toys/A4515ADB_1.jpg', 19.99, 5, 2, 7), -- ^Stuffed Animals
-('VTech PAW Patrol Learning Pup Watch - Chase - English Edition', '../Website/img/toys/B4659B92_1.jpg', 24.99, 7, 3, 2),
-('VTech PAW Patrol Learning Pup Watch - Marshall - English Edition', '../Website/img/toys/E4C1FB88_1.jpg', 24.99, 7, 3, 2),
-('VTech PAW Patrol: The Movie: Learning Tablet - English Edition', '../Website/img/toys/044B3932_1.jpg', 27.98, 7, 3, 2),
-('VTech PAW Patrol: The Movie: Learning Phone - English Edition', '../Website/img/toys/449A1A77_1.jpg', 17.48, 7, 3, 2),
-('LeapFrog PAW Patrol: To the Rescue! - English Edition', '../Website/img/toys/D427E942_1.jpg', 56.99, 7, 3, 2), -- ^Educational
+('Jurassic World: Dominion Sound Slashin Therizinosaurus Dinosaur Figure',  52.99, 73, '../Website/img/toys/D41E79C8_1.jpg',9, 4, 1),
+('Marvel Legends Series Moon Knight, Marvel Comics, Marvel Legends Action Figures, 6 Inch', 35.99, 44, '../Website/img/toys/44CE6976_1.jpg', 3, 5, 1),
+('Marvel Spider-Man Titan Hero Series Spider-Man 12-Inch-Scale Action Figure', 14.99, 52, '../Website/img/toys/E4BA9AA7_1.jpg', 3, 5, 1),
+('Marvel Avengers Mech Strike Monster Hunters Monster Punch Thanos Toy, 9-Inch-Scale Deluxe Action Figure', 23.98, 12, '../Website/img/toys/5419DA81_1.jpg', 3, 5, 1), -- ^action figures
+('Play-Doh Super Color Pack of 12 Cans - R Exclusive', 10.48, 31, '../Website/img/toys/D426A9BF_1.jpg', 11, 2, 8),
+('Play-Doh Kitchen Creations Colorful Cafe Playset', 23.77, 12, '../Website/img/toys/1416BA01_1.jpg', 11, 3, 8),
+('Play-Doh Kitchen Creations Flip and Pancakes Playset 14-Piece Breakfast Toy', 21.99, 24, '../Website/img/toys/C4C2D814_1.jpg', 11, 3, 8),
+('Paw Patrol Pebble Painting Craft Set - R Exclusive', 8.47, 9, '../Website/img/toys/34ACB8F3_1.jpg', 7, 3, 8),
+('Paw Patrol Mosaic Pictures Craft Set - R Exclusive', 8.57, 23, '../Website/img/toys/A4F0B90E_1.jpg', 7, 3, 8), -- ^arts and crafts
+('Tonie - Moana - English Edition', 24.99, 55, '../Website/img/toys/3412DBF0_1.jpg', 5, 4, 9),
+('Tonie - Paw Patrol - Chase - English Edition', 24.99, 30, '../Website/img/toys/E41EABC5_1.jpg', 7, 4, 9),
+('Hulk Cable Guy Phone and Controller Holder', 29.99, 43, '../Website/img/toys/649DDACB_1.jpg', 3, 5, 9),
+('Wolverine Cable Guy Phone and Controller Holder', 29.99, 17, '../Website/img/toys/F45799F2_1.jpg', 3, 5, 9),
+('Playstation 4-Marvel''s Guardians Of The Galaxy', 55.98, 32, '../Website/img/toys/C46C18B9_1.jpg', 3, 6, 9), -- ^electronics
+('Squishmallows 8" - Sonic the Hedgehog', 19.99, 12, '../Website/img/toys/44908954_1.jpg', 10, 2, 7),
+('Squishmallows 8" - Shadow the Hedgehog', 19.99, 24, '../Website/img/toys/04F65BA8_1.jpg', 10, 2, 7),
+('Squishmallows 8" - Tails', 19.99, 29, '../Website/img/toys/E4E94806_1.jpg', 10, 2, 7),
+('Disney - Stitch Holiday Plush', 24.99, 60, '../Website/img/toys/045C185A_1.jpg', 5, 2, 7),
+('Disney - Mickey Mouse Plush 17 inches', 19.99, 16, '../Website/img/toys/A4515ADB_1.jpg', 5, 2, 7), -- ^Stuffed Animals
+('VTech PAW Patrol Learning Pup Watch - Chase - English Edition', 24.99, 46, '../Website/img/toys/B4659B92_1.jpg', 7, 3, 2),
+('VTech PAW Patrol Learning Pup Watch - Marshall - English Edition', 24.99, 39, '../Website/img/toys/E4C1FB88_1.jpg', 7, 3, 2),
+('VTech PAW Patrol: The Movie: Learning Tablet - English Edition', 27.98, 18, '../Website/img/toys/044B3932_1.jpg', 7, 3, 2),
+('VTech PAW Patrol: The Movie: Learning Phone - English Edition', 17.48, 52, '../Website/img/toys/449A1A77_1.jpg', 7, 3, 2),
+('LeapFrog PAW Patrol: To the Rescue! - English Edition', 56.99, 14, '../Website/img/toys/D427E942_1.jpg', 7, 3, 2), -- ^Educational
 ('Taboo', 20.98, 16, '../Website/img/toys/taboo_boardgame.jpg', 1, 6, 5),
 ('Exploding Kittens', 26.94, 24, '../Website/img/toys/exploding_kittens_boardgame.jpg', 1, 4, 5),
 ('Candy Land', 12.99, 16, '../Website/img/toys/candy_land_boardgame.jpg', 1, 2, 5),

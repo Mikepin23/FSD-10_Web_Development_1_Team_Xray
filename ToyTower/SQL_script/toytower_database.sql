@@ -1,10 +1,10 @@
 /*
-CREATE DATABASE toytower
+CREATE DATABASE fsd10_xray
 ;
 */
 
 /* Switch to the database */
-USE toytower
+USE fsd10_xray
 ;
 
 CREATE TABLE Users -- Create account
@@ -47,7 +47,7 @@ CREATE TABLE Categories
 CREATE TABLE Toys 
 (
 	ToysID int PRIMARY KEY NOT NULL AUTO_INCREMENT,
-    ToyName varchar(50) NOT NULL,
+    ToyName varchar(150) NOT NULL,
     Price DECIMAL(10, 2) NOT NULL,
     Stock int NOT NUll,
     ToyImage varchar(150) NOT NULL, -- Path to Image
