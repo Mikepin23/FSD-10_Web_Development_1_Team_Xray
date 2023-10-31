@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToyTower</title>
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <!-- Bootstrap CSS Link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome CSS Link -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/homepage_style.css" />
+    <script src="homepage.js"></script>
+  </head>
+
+  <body>
+    <section id="logo" class="bg-blue">
+      <div class="container d-flex justify-content-center align-items-center">
+        <a class="navbar-logo" href="#">
+          <img
+            src="../img/logo/ToyTowerLogo.png"
+            alt="ToyTower Logo"
+            height="200px"
+          />
+        </a>
+      </div>
+    </section>
+
+    <section id="navigation">
+      <nav
+        class="navbar navbar-expand-lg navbar-light text-center justify-content-evenly"
+      >
+        <div class="container ml-auto">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <!-- <li class="nav-item">
+                <a class="navbar-logo" href="#">
+                  <img
+                    src="img\ToyTower_Logo(3).png"
+                    alt="ToyTower Logo"
+                    height="100px"
+                  />
+                </a>
+              </li> -->
+              <li class="nav-item nav-justified">
+                <a class="nav-link n" href="#">Categories</a>
+              </li>
+              <li class="nav-item nav-justified">
+                <a class="nav-link" href="#">Popular Brands</a>
+              </li>
+              <li class="nav-item nav-justified">
+                <a class="nav-link" href="#">Top Toys</a>
+              </li>
+              <li class="nav-item nav-justified">
+                <a class="nav-link" href="#">Deals</a>
+              </li>
+              <li class="nav-item">
+                <form class="form-inline my-2 my-lg-0">
+                  <div class="input-group">
+                    <input
+                      class="form-control mr-sm-2"
+                      type="search"
+                      placeholder="Search"
+                      aria-label="Search"
+                    />
+                    <button class="btn btn-dark" type="submit">
+                      <i class="fas fa-search"></i>
+                    </button>
+                  </div>
+                </form>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#"
+                  ><i class="fas fa-shopping-cart icon"></i
+                ></a>
+              </li>
+              <li class="nav-item icon">
+                <a class="nav-link" href="#">
+                  <button class="btn btn-dark my-2 my-sm-0" type="submit">
+                    Login
+                  </button>
+                </a>
+              </li>
+              <li class="nav-item icon">
+                <a class="nav-link" href="#">
+                  <button class="btn btn-dark my-2 my-sm-0" type="submit">
+                    Sign Up
+                  </button>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </section>
+
+    <section id="homepage-body">
+      <div class="w3-content w3-display-container">
+        <img
+          class="mySlides"
+          src="../img/Carrouselpics/carrouselpic.png"
+          style="width: 100%"
+        />
+        <img
+          class="mySlides"
+          src="../img/Carrouselpics/jellycat.png"
+          style="width: 100%"
+        />
+        <img
+          class="mySlides"
+          src="../img/Carrouselpics/Standard_Banner_2_1080x.png"
+          style="width: 100%"
+        />
+        <img
+          class="mySlides"
+          src="../img/Carrouselpics/TRU-d-HP-LPOS_101923-en.png"
+          style="width: 100%"
+        />
+
+        <button
+          class="w3-button w3-black w3-display-left"
+          onclick="plusDivs(-1)"
+        >
+          &#10094;
+        </button>
+        <button
+          class="w3-button w3-black w3-display-right"
+          onclick="plusDivs(1)"
+        >
+          &#10095;
+        </button>
+      </div>
+
+      <br />
+
+      <div class="banner">
+        <h1>Shop By Brand</h1>
+      </div>
+
+      <br />
+
+      <div class="button-container">
+        <button class="brand-button">
+          <img src="../img/brands/barbie.png" alt="Image1" />
+        </button>
+        <button class="brand-button">
+          <img src="../img/brands/disney.png" alt="Image2" />
+        </button>
+        <button class="brand-button">
+          <img src="../img/brands/hasbro.png" alt="Image3" />
+        </button>
+        <button class="brand-button">
+          <img src="../img/brands/marvel.png" alt="Image4" />
+        </button>
+        <button class="brand-button">
+          <img src="../img/brands/pawpatrol.png" alt="Image5" />
+        </button>
+        <button class="brand-button">
+          <img src="../img/brands/sonic.png" alt="Image5" />
+        </button>
+      </div>
+
+      <br />
+
+      <div class="banner">
+        <h2>Shop By Age</h2>
+      </div>
+
+      <br />
+
+      <div class="button-container">
+        <button class="age-button">
+          <img src="../img/ages/0-2.png" alt="Image1" />
+        </button>
+        <button class="age-button">
+          <img src="../img/ages/3-4.png" alt="Image2" />
+        </button>
+        <button class="age-button">
+          <img src="../img/ages/5-7.png" alt="Image3" />
+        </button>
+        <button class="age-button">
+          <img src="../img/ages/8-10.png" alt="Image4" />
+        </button>
+        <button class="age-button">
+          <img src="../img/ages/11-12.png" alt="Image5" />
+        </button>
+        <button class="age-button">
+          <img src="../img/ages/13+.png" alt="Image5" />
+        </button>
+      </div>
+    </section>
+
+    <br />
+
+    <!-- <div class="Age_Buttons">
+        <button class="button button1">0-12 Months</button>
+        <button class="button button2">1-2 Years</button>
+        <button class="button button3">3-5 Years</button>
+        <button class="button button4">6-9 Years</button>
+        <button class="button button5">9-12 Years</button>
+      </div>
+    </section> -->
+
+    <section id="newsletter">
+      <footer class="bg-blue text-white py-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-6 offset-md-3 text-center">
+              <h2 class="mb-4">Subscribe to Our Newsletter</h2>
+              <form>
+                <div class="form-group d-flex">
+                  <input
+                    type="email"
+                    class="form-control mr-2"
+                    id="email"
+                    placeholder="Enter your email"
+                    required
+                  />
+                  <button class="btn btn-dark icon" type="submit">
+                    Subscribe
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </section>
+
+    <section id="above-footer">
+      <footer class="text-center py-3">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <a href="#" class="text-black mx-3">My Account</a>
+              <a href="#" class="text-black mx-3">FAQ</a>
+              <a href="#" class="text-black mx-3">Gift Services</a>
+              <a href="#" class="text-black mx-3">About Us</a>
+              <a href="#" class="text-black mx-3">Terms and Conditions</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </section>
+
+    <section id="footer">
+      <footer class="bg-blue text-white text-center py-3">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <a href="#" class="text-white mx-3"
+                ><i class="fab fa-instagram larger-icon"></i
+              ></a>
+              <a href="#" class="text-white mx-3"
+                ><i class="fab fa-facebook larger-icon"></i
+              ></a>
+              <a href="#" class="text-white mx-3"
+                ><i class="fab fa-youtube larger-icon"></i
+              ></a>
+              <a href="#" class="text-white mx-3"
+                ><i class="fab fa-twitter larger-icon"></i
+              ></a>
+              <a href="#" class="text-white mx-3"
+                ><i class="fab fa-pinterest larger-icon"></i
+              ></a>
+              <a href="#" class="text-white mx-3"
+                ><i class="fab fa-tiktok larger-icon"></i
+              ></a>
+              <p>
+                © 2023 ToyTower Ltd. All Rights reserved. Use of this site
+                signifies your acceptance of ToyTower Website Terms and
+                Conditions and Privacy Policy. <br />
+                275 Rue Lakeshore Road, Sainte-Anne-de-Bellevue, QC H9X 3L9,
+                Canada
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </section>
+
+    <!-- Bootstrap JS and dependencies (jQuery and Popper.js) -->
+    <!-- Bootstrap JS and dependencies (jQuery and Popper.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

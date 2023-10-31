@@ -47,6 +47,9 @@ $f3->route('POST @brandUpdate: /update/@brands', 'BrandController->updateSave');
  */
 $f3->route('GET @cartRead: /cart', 'CartController->cart');
 
+$f3->route('GET @cartCreate: /add', 'CartController->add');
+$f3->route('POST @cartCreate: /add', 'CartController->addSave');
+
 $f3->route('GET @cartUpdate: /update/@cart', 'CartController->update');
 $f3->route('POST @cartUpdate: /update/@cart', 'CartController->updateSave');
 
@@ -64,10 +67,10 @@ $f3->route('POST @loginUpdate: /update/@login', 'LoginController->updateSave');
 /**
  * Sign Up CRUD
  */
-$f3->route('GET @sign-upRead: /sign-up', 'SignUpController->sign-up');
+$f3->route('GET @signupRead: /sign-up', 'SignUpController->sign-up');
 
-$f3->route('GET @sign-upCreate: /add', 'SignUpController->add');
-$f3->route('POST @sign-upCreate: /add', 'SignUpController->addSave');
+$f3->route('GET @signupCreate: /add', 'SignUpController->add');
+$f3->route('POST @signupCreate: /add', 'SignUpController->addSave');
 
 // start the framework
 $f3->run();
