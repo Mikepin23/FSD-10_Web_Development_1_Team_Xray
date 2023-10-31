@@ -1,4 +1,4 @@
-<include href="headers/cart_header.html"><!-- template header -->
+<?php echo $this->render('headers/cart_header.html',NULL,get_defined_vars(),0); ?><!-- template header -->
 
     <section id="cart">
       <div class="container mt-5 p-3 rounded cart">
@@ -276,4 +276,4 @@
       </div>
     </section>
 
-    <include href="footer.html"><!-- template footer -->
+    <?php echo $this->render('footer.html',NULL,get_defined_vars(),0); ?><!-- template footer -->

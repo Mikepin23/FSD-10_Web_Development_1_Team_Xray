@@ -3,18 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><?= ($pageTitle) ?></title>
+    <title>{{ @pageTitle }}</title>
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/homepage_style.css" />
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-    <script src="homepage.js"></script>
-
-    <!-- <link rel="stylesheet" href="css/categories_style.css" />
     <link rel="stylesheet" href="css/brands_style.css" />
-    <link rel="stylesheet" href="css/toys_style.css" />
-    <link rel="stylesheet" href="css/cart_style.css" />
-    <link rel="stylesheet" href="css/login_style.css" /> -->
-    <link rel="stylesheet" href="css/createAccount_style.css" />
   
     <!-- Bootstrap CSS Link -->
     <link
@@ -69,10 +60,10 @@
                 </a>
               </li> -->
               <li class="nav-item nav-justified">
-                <a class="nav-link n" href="<?= ($BASE) ?><?= (Base::instance()->alias('catRead')) ?>">Categories</a>
+                <a class="nav-link n" href="{{ @BASE }}{{ 'catRead' | alias }}">Categories</a>
               </li>
               <li class="nav-item nav-justified">
-                <a class="nav-link" href="<?= ($BASE) ?><?= (Base::instance()->alias('brandRead')) ?>">Brands</a>
+                <a class="nav-link" href="{{ @BASE }}{{ 'brandRead' | alias }}">Brands</a>
               </li>
               <li class="nav-item nav-justified">
                 <a class="nav-link" href="#">Top Toys</a>
@@ -97,19 +88,19 @@
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="<?= ($BASE) ?><?= (Base::instance()->alias('cartRead')) ?>"
+                <a class="nav-link" href="{{ @BASE }}{{ 'cartRead' | alias }}"
                   ><i class="fas fa-shopping-cart icon"></i
                 ></a>
               </li>
               <li class="nav-item icon">
-                <a class="nav-link" href="<?= ($BASE) ?><?= (Base::instance()->alias('loginRead')) ?>">
+                <a class="nav-link" href="{{ @BASE }}{{ 'loginRead' | alias }}">
                   <button class="btn btn-dark my-2 my-sm-0" type="submit">
                     Login
                   </button>
                 </a>
               </li>
               <li class="nav-item icon">
-                <a class="nav-link" href="<?= ($BASE) ?><?= (Base::instance()->alias('signUpRead')) ?>">
+                <a class="nav-link" href="{{ @BASE }}{{ 'signUpRead' | alias }}">
                   <button class="btn btn-dark my-2 my-sm-0" type="submit">
                     Sign Up
                   </button>

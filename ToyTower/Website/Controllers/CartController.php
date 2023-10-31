@@ -3,7 +3,7 @@
 /**
  * Logic for categories
  */
-class CartController{
+class CategoryController{
 
 	private $model; // db access
 	private $f3; // framework instance

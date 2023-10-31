@@ -1,4 +1,4 @@
-<include href="headers/login_header.html"><!-- template header -->
+<?php echo $this->render('headers/login_header.html',NULL,get_defined_vars(),0); ?><!-- template header -->
   
     <section id="login">
       <div class="card">
@@ -43,4 +43,4 @@
       </div>
     </section>
 
-    <include href="footer.html"><!-- template footer -->
+    <?php echo $this->render('footer.html',NULL,get_defined_vars(),0); ?><!-- template footer -->

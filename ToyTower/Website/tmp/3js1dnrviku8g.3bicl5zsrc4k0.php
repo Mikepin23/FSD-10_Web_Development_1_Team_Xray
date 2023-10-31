@@ -1,4 +1,4 @@
-<?php echo $this->render('header.html',NULL,get_defined_vars(),0); ?><!-- template header -->
+<?php echo $this->render('headers/homepage_header.html',NULL,get_defined_vars(),0); ?><!-- template header -->
 
   <section id="homepage-body">
     <div class="w3-content w3-display-container">

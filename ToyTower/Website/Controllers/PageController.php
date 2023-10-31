@@ -14,6 +14,24 @@ class PageController{
 
 	}
 
+	function categories($f3){
+
+		// create template instance to show visual to users
+		$f3->set("pageTitle", "Categories | ToyTower");
+
+		echo Template::instance()->render('categories.html');
+
+	}
+
+	function brands($f3){
+
+		// create template instance to show visual to users
+		$f3->set("pageTitle", "Brands | ToyTower");
+
+		echo Template::instance()->render('brands.html');
+
+	}
+
   function cart($f3){
 
 		// create template instance to show visual to users
@@ -29,6 +47,15 @@ class PageController{
 		$f3->set("pageTitle", "Login | ToyTower");
 
 		echo Template::instance()->render('login.html');
+
+	}
+
+	function signUp($f3){
+
+		// create template instance to show visual to users
+		$f3->set("pageTitle", "Create Account | ToyTower");
+
+		echo Template::instance()->render('createAccount.html');
 
 	}
   

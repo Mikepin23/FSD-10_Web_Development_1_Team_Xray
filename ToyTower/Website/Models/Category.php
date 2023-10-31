@@ -14,7 +14,7 @@ class Category extends Model{
 	 * @return object
 	 */
 	public function getById($id){
-		return $this->findone(['category_id=?', $id]);
+		return $this->findone(['CategoryID=?', $id]);
 	}
 
 	/**
@@ -23,7 +23,7 @@ class Category extends Model{
 	 * @param integer $id
 	 */
 	public function updateData($id){
-		$this->load( ['category_id=?', $id ]);
+		$this->load( ['CategoryID=?', $id ]);
 		$this->copyFrom('POST');
 		$this->update();
 	}
@@ -44,7 +44,7 @@ class Category extends Model{
 	 * @param integer $id
 	 */
 	public function deleteData($id){
-		$this->load( ['category_id=?', $id] );
+		$this->load( ['CategoryID=?', $id] );
 		// check is exists
 		$this->erase();
 	}
@@ -58,7 +58,7 @@ class Category extends Model{
 		$rows = $this->all();
 		$data = [];
 		foreach($rows as $r)
-			$data[$r['category_id']] = $r['name'];
+			$data[$r['CategoryID']] = $r['CategoryName'];
 
 		return $data;
 	}

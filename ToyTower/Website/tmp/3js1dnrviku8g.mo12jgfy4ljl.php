@@ -1,4 +1,4 @@
-<include href="headers/createAccount_header.html"><!-- template header -->
+<?php echo $this->render('headers/createAccount_header.html',NULL,get_defined_vars(),0); ?><!-- template header -->
 
     <!-- <section id="create-account">
       <div class="card">
@@ -101,4 +101,4 @@
       </div>
     </section>
 
-    <include href="footer.html"><!-- template footer -->
+    <?php echo $this->render('footer.html',NULL,get_defined_vars(),0); ?><!-- template footer -->

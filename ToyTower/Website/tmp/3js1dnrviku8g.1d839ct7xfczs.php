@@ -1,4 +1,4 @@
-<include href="headers/brands_header.html"><!-- template header -->
+<?php echo $this->render('header.html',NULL,get_defined_vars(),0); ?><!-- template header -->
 
     <h1>Brands</h1>
 
@@ -165,4 +165,4 @@
       </div>
     </section>
 
-    <include href="footer.html"><!-- template footer -->
+    <?php echo $this->render('footer.html',NULL,get_defined_vars(),0); ?><!-- template footer -->

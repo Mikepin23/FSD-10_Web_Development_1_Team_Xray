@@ -20,7 +20,7 @@ $f3->route('GET @home: /', 'PageController->homepage');
 /**
  * Categories CRUD
  */
-$f3->route('GET @catRead: /categories', 'CategoryController->categories');
+$f3->route('GET @catRead: /categories', 'PageController->categories');
 
 $f3->route('GET @catUpdate: /update/@cat', 'CategoryController->update');
 $f3->route('POST @catUpdate: /update/@cat', 'CategoryController->updateSave');
@@ -34,7 +34,7 @@ $f3->route('POST @catUpdate: /update/@cat', 'CategoryController->updateSave');
 /**
  * Brands CRUD
  */
-$f3->route('GET @brandRead: /brands', 'BrandController->brands');
+$f3->route('GET @brandRead: /brands', 'PageController->brands');
 
 $f3->route('GET @brandUpdate: /update/@brands', 'BrandController->update');
 $f3->route('POST @brandUpdate: /update/@brands', 'BrandController->updateSave');
@@ -45,7 +45,7 @@ $f3->route('POST @brandUpdate: /update/@brands', 'BrandController->updateSave');
 /**
  * Cart CRUD
  */
-$f3->route('GET @cartRead: /cart', 'CartController->cart');
+$f3->route('GET @cartRead: /cart', 'PageController->cart');
 
 $f3->route('GET @cartCreate: /add', 'CartController->add');
 $f3->route('POST @cartCreate: /add', 'CartController->addSave');
@@ -59,7 +59,7 @@ $f3->route('GET @cartDelete: /delete/@cart', 'CartController->delete');
 /**
  * Login CRUD
  */
-$f3->route('GET @loginRead: /login', 'LoginController->login');
+$f3->route('GET @loginRead: /login', 'PageController->login');
 
 $f3->route('GET @loginUpdate: /update/@login', 'LoginController->update');
 $f3->route('POST @loginUpdate: /update/@login', 'LoginController->updateSave');
@@ -67,10 +67,10 @@ $f3->route('POST @loginUpdate: /update/@login', 'LoginController->updateSave');
 /**
  * Sign Up CRUD
  */
-$f3->route('GET @signupRead: /sign-up', 'SignUpController->sign-up');
+$f3->route('GET @signUpRead: /create-account', 'PageController->signUp');
 
-$f3->route('GET @signupCreate: /add', 'SignUpController->add');
-$f3->route('POST @signupCreate: /add', 'SignUpController->addSave');
+$f3->route('GET @signUpCreate: /add', 'SignUpController->add');
+$f3->route('POST @signUpCreate: /add', 'SignUpController->addSave');
 
 // start the framework
 $f3->run();
