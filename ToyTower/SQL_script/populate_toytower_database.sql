@@ -1,43 +1,43 @@
-INSERT INTO Brands (BrandName)
+INSERT INTO Brands ('BrandName', 'BrandImage')
 VALUES 
-('Hasbro'), 
-('Barbie'), 
-('Marvel'), 
-('Fisher Price'), 
-('Disney'), 
-('Franklin'), 
-('Paw Patrol'), 
-('Hot Wheels'), 
-('Jurrasic World'),
-('Sonic'), 
-('Play-Doh'),
-('MGA'), 
-('KidCentral')
+('Hasbro', '../Website/img/brands/hasbro.png'), 
+('Barbie', '../Website/img/brands/barbie.png'), 
+('Marvel', '../Website/img/brands/marvel.png'), 
+('Fisher Price', '../Website/img/brands/fisherprice.png'), 
+('Disney', '../Website/img/brands/disney.png'), 
+('Franklin', '../Website/img/brands/franklin.png'), 
+('Paw Patrol', '../Website/img/brands/pawpatrol.png'), 
+('Hot Wheels', '../Website/img/brands/hotwheels.png'), 
+('Jurrasic World', '../Website/img/brands/jurassicworld.png'),
+('Sonic', '../Website/img/brands/sonic.png'), 
+('Play-Doh', '../Website/img/brands/playdoh.png'),
+('MGA', '../Website/img/brands/mga.png'), 
+('KidCentral', '../Website/img/brands/kidcentral.png')
 ;
 
-INSERT INTO AgeRanges (`Range`)
+INSERT INTO AgeRanges ('Range', 'AgeRangeImage')
 VALUES 
-('0 - 2 years'),
-('3 - 4 years'),
-('5 - 7 years'),
-('8 - 10 years'),
-('11 - 12 years'),
-('13+ years'),
-('All Ages')
+('0 - 2 years', '../Website/img/ages/0-2.png'),
+('3 - 4 years', '../Website/img/ages/3-4.png'),
+('5 - 7 years', '../Website/img/ages/5-7.png'),
+('8 - 10 years', '../Website/img/ages/8-10.png'),
+('11 - 12 years', '../Website/img/ages/11-12.png'),
+('13+ years', '../Website/img/ages/13+.png')
+-- ('All Ages')
 ;
 
-INSERT INTO Categories (CategoryName)
+INSERT INTO Categories ('CategoryName', 'CategoryImage')
 VALUES 
-('Action Figures'),
-('Learning'),
-('Dolls'),
-('Sports'),
-('Board Games'),
-('Puzzles'),
-('Stuffed Animals'),
-('Arts and Crafts'),
-('Electronics'),
-('Toddlers')
+('Action Figures', '../Website/img/categories/actionfigs.png'),
+('Learning', '../Website/img/categories/educational.png'),
+('Dolls', '../Website/img/categories/dolls.png'),
+('Sports', '../Website/img/categories/sports.png'),
+('Board Games', '../Website/img/categories/boardgames.png'),
+('Puzzles', '../Website/img/categories/puzzles.png'),
+('Stuffed Animals', '../Website/img/categories/stuffedanimals.png'),
+('Arts and Crafts', '../Website/img/categories/artsncrafts.png'),
+('Electronics', '../Website/img/categories/Electronics.png'),
+('Toddlers', '../Website/img/categories/Toddlers.png')
 ;
 
 INSERT INTO Toys (ToyName, Price, Stock, ToyImage, BrandID, AgeRangeID, CategoryID)
@@ -78,15 +78,15 @@ VALUES
 ('My Carry Potty - Penguin', 34.99, 9, '../Website/img/toys/my_carry_potty_toddler.jpg', 13, 2, 10),
 ('Little People Hot Wheels Race Track for Toddlers', 37.99, 19, '../Website/img/toys/little_people_hot_wheels_toddlers.jpg', 8, 2, 10),
 ('Toronto Raptors NBA Basketball', 22.99, 44, '../Website/img/toys/basketball_sports.jpg', 6, 6, 4),
-(`Adjust 'N Jam Pro Basketball`, 84.99, 13, '../Website/img/toys/adjust_jam_net_sports.jpg', 4, 4, 4),
+('Adjust ''N Jam Pro Basketball', 84.99, 13, '../Website/img/toys/adjust_jam_net_sports.jpg', 4, 4, 4),
 ('NHL Mini Hockey Goal Set', 79.99, 16, '../Website/img/toys/nhl_mini_hockey_sports.jpg', 6, 4, 4),
 ('Soccer Shootout', 69.99, 23, '../Website/img/toys/soccer_shootout_sports.jpg', 6, 4, 4),
-(`Player's Series 9.5" Glove`, 29.99, 27, '../Website/img/toys/baseball_glove_sports.jpg', 6, 3, 4),
+('Player''s Series 9.5" Glove', 29.99, 27, '../Website/img/toys/baseball_glove_sports.jpg', 6, 3, 4),
 ('The Flintstones 1000-Piece Jigsaw Puzzle', 29.99, 34, '../Website/img/toys/flintstones_puzzle.jpg', 5, 6, 6),
 ('Star Wars Universe Puzzle 2000pc', 44.99, 28, '../Website/img/toys/star_wars_puzzle.jpg', 5, 6, 6),
 ('Disney 3D Castle 216 Piece 3D Jigsaw Puzzle', 89.99, 15, '../Website/img/toys/disney_3d_puzzle.jpg', 5, 6, 6),
 ('Moana and Maui Puzzle 100pc', 19.99, 23, '../Website/img/toys/moana_maui_puzzle.jpg', 5, 3, 6),
-(`Rubik's Coach Cube, Learn to Solve 3x3 Cube with Stickers`, 19.99, 17, '../Website/img/toys/rubiks_cube_puzzle.jpg', 1, 4, 6),
+('Rubik''s Coach Cube, Learn to Solve 3x3 Cube with Stickers', 19.99, 17, '../Website/img/toys/rubiks_cube_puzzle.jpg', 1, 4, 6),
 ('Barbie Dreamhouse', 199.94, 8, '../Website/img/toys/barbie_dreamhouse_dolls.jpg', 2, 4, 3),
 ('My Little Pony Toys', 19.87, 8, '../Website/img/toys/my_little_pony_dolls.jpg', 1, 2, 3),
 ('Rainbow High Cheer Skyler Bradshaw - Blue Fashion Doll ', 34.99, 25, '../Website/img/toys/rainbow_high_blue_doll.jpg', 12, 3, 3),
