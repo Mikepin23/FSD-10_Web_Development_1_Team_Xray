@@ -1,0 +1,43 @@
+2023-10-31
+
+/* --------------------------------------------------------- */
+
+General Discussion:
+
+- Definitely focus on achieving a working site. 
+
+/* --------------------------------------------------------- */
+
+1) What we have done since the last meeting
+
+Michael: 
+
+- Worked on populating the database.
+
+Zachary: 
+
+- Worked on populating the database. Worked on the html and css on the homepage.
+
+/* --------------------------------------------------------- */
+
+2) What we plan to do today
+
+Michael: 
+
+- Organize folders for use with Fat-Free framework. Fix all routes on index.php. Start CRUD on categories page. 
+
+Zachary: 
+
+- Start to implement CRUD to the cart page using the Fat-Free framework.
+
+/* --------------------------------------------------------- */
+
+3) Likely problems we may face 
+
+Michael: 
+
+- Getting better acquainted with the Fat-Free framework.
+
+Zachary: 
+
+- Getting better acquainted with the Fat-Free framework.
