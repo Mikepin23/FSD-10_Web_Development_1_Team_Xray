@@ -34,7 +34,7 @@ $f3->route('POST @catUpdate: /update/@cat', 'CategoryController->updateSave');
 /**
  * Brands CRUD
  */
-$f3->route('GET @brandRead: /brands', 'PageController->brands');
+$f3->route('GET @brandRead: /brands', 'BrandController->listing');
 
 $f3->route('GET @brandUpdate: /update/@brands', 'BrandController->update');
 $f3->route('POST @brandUpdate: /update/@brands', 'BrandController->updateSave');

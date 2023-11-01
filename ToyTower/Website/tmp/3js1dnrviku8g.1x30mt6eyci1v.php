@@ -22,7 +22,7 @@
   <body>
     <section id="logo" class="bg-blue">
       <div class="container d-flex justify-content-center align-items-center">
-        <a class="navbar-logo" href="#">
+        <a class="navbar-logo" href="<?= ($BASE) ?><?= (Base::instance()->alias('home')) ?>">
           <img
             src="img/logo/ToyTowerLogo.png"
             alt="ToyTower Logo"

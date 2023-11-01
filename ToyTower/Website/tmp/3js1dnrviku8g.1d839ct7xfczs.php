@@ -1,8 +1,4 @@
-<?php echo $this->render('header.html',NULL,get_defined_vars(),0); ?><!-- template header -->
-
-    <h1>Brands</h1>
-
-    <!-- <section id="toy-categories" class="py-5">
+<?php echo $this->render('headers/brands_header.html',NULL,get_defined_vars(),0); ?>
       <div class="container">
         <div class="row">
           <div class="col-lg-4 mb-4">
@@ -39,6 +35,7 @@
       </div>
     </section> -->
 
+  <?php foreach (($brands?:[]) as $b): ?>
     <section id="toy-brands">
       <div class="container mt-5">
         <div class="row">
@@ -46,112 +43,12 @@
             <div class="card">
               <img
                 class="card__background"
-                src="img/brands/disney.jpg"
+                src="<?= ($b['BrandImage']) ?>"
                 alt="Disney"
               />
               <div class="card__content | flow">
                 <div class="card__content--container | flow">
-                  <h2 class="card__title">Stuffed Animals</h2>
-                  <p class="card__description">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Rerum in labore laudantium deserunt fugiat numquam.
-                  </p>
-                </div>
-                <button class="card__button">See More</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card">
-              <img
-                class="card__background"
-                src="img/categories/teddyBear.jpg"
-                alt="Teddy Bear"
-              />
-              <div class="card__content | flow">
-                <div class="card__content--container | flow">
-                  <h2 class="card__title">Stuffed Animals</h2>
-                  <p class="card__description">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Rerum in labore laudantium deserunt fugiat numquam.
-                  </p>
-                </div>
-                <button class="card__button">See More</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card">
-              <img
-                class="card__background"
-                src="img/categories/teddyBear.jpg"
-                alt="Teddy Bear"
-              />
-              <div class="card__content | flow">
-                <div class="card__content--container | flow">
-                  <h2 class="card__title">Stuffed Animals</h2>
-                  <p class="card__description">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Rerum in labore laudantium deserunt fugiat numquam.
-                  </p>
-                </div>
-                <button class="card__button">See More</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card">
-              <img
-                class="card__background"
-                src="img/categories/teddyBear.jpg"
-                alt="Teddy Bear"
-              />
-              <div class="card__content | flow">
-                <div class="card__content--container | flow">
-                  <h2 class="card__title">Stuffed Animals</h2>
-                  <p class="card__description">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Rerum in labore laudantium deserunt fugiat numquam.
-                  </p>
-                </div>
-                <button class="card__button">See More</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card">
-              <img
-                class="card__background"
-                src="img/categories/teddyBear.jpg"
-                alt="Teddy Bear"
-              />
-              <div class="card__content | flow">
-                <div class="card__content--container | flow">
-                  <h2 class="card__title">Stuffed Animals</h2>
-                  <p class="card__description">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Rerum in labore laudantium deserunt fugiat numquam.
-                  </p>
-                </div>
-                <button class="card__button">See More</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card">
-              <img
-                class="card__background"
-                src="img/categories/teddyBear.jpg"
-                alt="Teddy Bear"
-              />
-              <div class="card__content | flow">
-                <div class="card__content--container | flow">
-                  <h2 class="card__title">Stuffed Animals</h2>
+                  <h2 class="card__title"><?= ($b['BrandName']) ?></h2>
                   <p class="card__description">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Rerum in labore laudantium deserunt fugiat numquam.
@@ -164,5 +61,7 @@
         </div>
       </div>
     </section>
+  <?php endforeach; ?>
 
-    <?php echo $this->render('footer.html',NULL,get_defined_vars(),0); ?><!-- template footer -->
+  <?php echo $this->render('footer.html',NULL,get_defined_vars(),0); ?></include
+>
