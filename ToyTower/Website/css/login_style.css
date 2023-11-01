@@ -1,3 +1,8 @@
+/**
+  * Template from source below, modified to fit aesthetics of the site
+  * https://bbbootstrap.com/snippets/bootstrap-create-account-signup-form-input-groups-60573468#
+**/
+
 #login {
   display: flex;
   justify-content: center;
