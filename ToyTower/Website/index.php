@@ -7,7 +7,7 @@ require "vendor/autoload.php";
 // load framework
 $f3 = Base::instance();
 
-// framework to automatically load the classees within these folders
+// framework to automatically load the classes within these folders
 $f3->set('AUTOLOAD', 'Controllers/|Models/');
 
 // framework to automatically load templates(view) from here
@@ -20,7 +20,7 @@ $f3->route('GET @home: /', 'PageController->homepage');
 /**
  * Categories CRUD
  */
-$f3->route('GET @catRead: /categories', 'PageController->categories');
+$f3->route('GET @catRead: /categories', 'CategoryController->listing');
 
 $f3->route('GET @catUpdate: /update/@cat', 'CategoryController->update');
 $f3->route('POST @catUpdate: /update/@cat', 'CategoryController->updateSave');
@@ -71,6 +71,11 @@ $f3->route('GET @signUpRead: /create-account', 'PageController->signUp');
 
 $f3->route('GET @signUpCreate: /add', 'SignUpController->add');
 $f3->route('POST @signUpCreate: /add', 'SignUpController->addSave');
+
+/**
+ * Toys CRUD
+ */
+$f3->route('GET @toyRead: /toys', 'ToyController->listing');
 
 // start the framework
 $f3->run();

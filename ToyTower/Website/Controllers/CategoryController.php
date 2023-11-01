@@ -16,7 +16,7 @@ class CategoryController{
 		$this->f3 = $f3Var; // f3 instance
 		$this->model = new Category();
 
-		$this->f3->set('pageTitle', "Categories"); // default page title
+		$this->f3->set('pageTitle', "Categories | ToyTower"); // default page title
 		$this->f3->set('error', ""); //default error message
 	}
 

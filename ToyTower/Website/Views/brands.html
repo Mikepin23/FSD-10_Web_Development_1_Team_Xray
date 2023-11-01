@@ -1,14 +1,12 @@
-<include href="headers/brands_header.html"><!-- template header -->
+<include href="headers/brands_header.html"
+  ><!-- template header -->
 
   <h1>Brands</h1>
 
- 
-
-  
-    <section id="toy-brands">
-      <div class="container mt-5">
-        <div class="row">
-          <repeat group="{{ @brands }}" value="{{ @b }}">
+  <section id="toy-brands">
+    <div class="container mt-5">
+      <div class="row">
+        <repeat group="{{ @brands }}" value="{{ @b }}">
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="card">
               <img
@@ -24,14 +22,18 @@
                     Rerum in labore laudantium deserunt fugiat numquam.
                   </p>
                 </div>
-                <button class="card__button">See More</button>
+                <a
+                  class="card__button"
+                  href="{{ @BASE }}{{ 'toyRead' | alias }}"
+                  >See More</a
+                >
               </div>
             </div>
           </div>
         </repeat>
-        </div>
       </div>
-    </section>
-  
+    </div>
+  </section>
 
-  <include href="footer.html"><!-- template footer -->
+  <include href="footer.html"><!-- template footer --></include></include
+>

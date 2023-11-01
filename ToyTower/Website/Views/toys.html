@@ -3,109 +3,20 @@
 
   <section id="toys">
     <div class="row">
-      <div class="col-md-3 col-sm-6">
-        <div class="product-grid">
-          <div class="product-image">
-            <img class="pic-1" src="../img/categories/teddyBear.jpg" />
-          </div>
-          <div class="product-content">
-            <h3 class="title">Teddy Bear</h3>
-            <div class="price">$66.00</div>
-            <a class="add-to-cart" href="#">add to cart</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-3 col-sm-6">
-        <div class="product-grid">
-          <div class="product-image">
-            <img class="pic-1" src="../img/categories/teddyBear.jpg" />
-          </div>
-          <div class="product-content">
-            <h3 class="title">Teddy Bear</h3>
-            <div class="price">$66.00</div>
-            <a class="add-to-cart" href="#">add to cart</a>
+      <repeat group="{{ @toys }}" value="{{ @t }}">
+        <div class="col-md-3 col-sm-6">
+          <div class="product-grid">
+            <div class="product-image">
+              <img class="pic-1" src="{{ @t['ToyImage'] }}" />
+            </div>
+            <div class="product-content">
+              <h3 class="title">{{ @t['ToyName'] }}</h3>
+              <div class="price">${{ @t['Price'] }}</div>
+              <a class="add-to-cart" href="#">add to cart</a>
+            </div>
           </div>
         </div>
-      </div>
-
-      <div class="col-md-3 col-sm-6">
-        <div class="product-grid">
-          <div class="product-image">
-            <img class="pic-1" src="../img/categories/teddyBear.jpg" />
-          </div>
-          <div class="product-content">
-            <h3 class="title">Teddy Bear</h3>
-            <div class="price">$66.00</div>
-            <a class="add-to-cart" href="#">add to cart</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-3 col-sm-6">
-        <div class="product-grid">
-          <div class="product-image">
-            <img class="pic-1" src="../img/categories/teddyBear.jpg" />
-          </div>
-          <div class="product-content">
-            <h3 class="title">Teddy Bear</h3>
-            <div class="price">$66.00</div>
-            <a class="add-to-cart" href="#">add to cart</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-3 col-sm-6">
-        <div class="product-grid">
-          <div class="product-image">
-            <img class="pic-1" src="../img/categories/teddyBear.jpg" />
-          </div>
-          <div class="product-content">
-            <h3 class="title">Teddy Bear</h3>
-            <div class="price">$66.00</div>
-            <a class="add-to-cart" href="#">add to cart</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-3 col-sm-6">
-        <div class="product-grid">
-          <div class="product-image">
-            <img class="pic-1" src="../img/categories/teddyBear.jpg" />
-          </div>
-          <div class="product-content">
-            <h3 class="title">Teddy Bear</h3>
-            <div class="price">$66.00</div>
-            <a class="add-to-cart" href="#">add to cart</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-3 col-sm-6">
-        <div class="product-grid">
-          <div class="product-image">
-            <img class="pic-1" src="../img/categories/teddyBear.jpg" />
-          </div>
-          <div class="product-content">
-            <h3 class="title">Teddy Bear</h3>
-            <div class="price">$66.00</div>
-            <a class="add-to-cart" href="#">add to cart</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-3 col-sm-6">
-        <div class="product-grid">
-          <div class="product-image">
-            <img class="pic-1" src="../img/categories/teddyBear.jpg" />
-          </div>
-          <div class="product-content">
-            <h3 class="title">Teddy Bear</h3>
-            <div class="price">$66.00</div>
-            <a class="add-to-cart" href="#">add to cart</a>
-          </div>
-        </div>
-      </div>
+      </repeat>
     </div>
   </section>
 
