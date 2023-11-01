@@ -32,7 +32,7 @@ class CategoryController{
 		$this->f3->set('categories', $categories);
 		
 		// show the view
-		echo Template::instance()->render('categories/listing.html');
+		echo Template::instance()->render('categories.html');
 		
 	}
 

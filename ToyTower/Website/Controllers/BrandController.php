@@ -3,13 +3,13 @@
 /**
  * Logic for categories
  */
-class BrandController{
+class BrandController {
 
 	private $model; // db access
 	private $f3; // framework instance
 
 	/**
-	 * @param object $f3Var Intance of fat free framwwork
+	 * @param object $f3Var Instance of fat free framework
 	 */
 	public function __construct($f3Var){
 
@@ -21,7 +21,7 @@ class BrandController{
 	}
 
 	/**
-	 * Displays a listing of all the categories
+	 * Displays a listing of all the brands
 	 */
 	public function listing(){
 
@@ -37,7 +37,7 @@ class BrandController{
 	}
 
 	/**
-	 * Displays form to update given cateogory
+	 * Displays form to update given category
 	 */
 	public function update(){
 		//get the id from the URL
@@ -56,7 +56,7 @@ class BrandController{
 	}
 
 	/**
-	 * Validate and updates the date of given cateogory
+	 * Validate and updates the date of given category
 	 */
 	public function updateSave(){
 		if ($this->validateForm()){ // data is good, save to db

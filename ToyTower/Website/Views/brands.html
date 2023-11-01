@@ -1,49 +1,14 @@
-<include href="headers/brands_header.html"
-  ><!-- template header -->
+<include href="headers/brands_header.html"><!-- template header -->
 
   <h1>Brands</h1>
 
-  <!-- <section id="toy-categories" class="py-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4 mb-4">
-            <div class="card">
-              <img src="category1.jpg" class="card-img-top" alt="Category 1" />
-              <div class="card-body">
-                <h5 class="card-title">Category 1</h5>
-                <p class="card-text">Description of Category 1.</p>
-                <a href="#" class="btn btn-primary">Explore</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 mb-4">
-            <div class="card">
-              <img src="category2.jpg" class="card-img-top" alt="Category 2" />
-              <div class="card-body">
-                <h5 class="card-title">Category 2</h5>
-                <p class="card-text">Description of Category 2.</p>
-                <a href="#" class="btn btn-primary">Explore</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 mb-4">
-            <div class="card">
-              <img src="category3.jpg" class="card-img-top" alt="Category 3" />
-              <div class="card-body">
-                <h5 class="card-title">Category 3</h5>
-                <p class="card-text">Description of Category 3.</p>
-                <a href="#" class="btn btn-primary">Explore</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
+ 
 
-  <repeat group="{{ @brands }}" value="{{ @b }}">
+  
     <section id="toy-brands">
       <div class="container mt-5">
         <div class="row">
+          <repeat group="{{ @brands }}" value="{{ @b }}">
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="card">
               <img
@@ -63,10 +28,10 @@
               </div>
             </div>
           </div>
+        </repeat>
         </div>
       </div>
     </section>
-  </repeat>
+  
 
-  <include href="footer.html"><!-- template footer --></include></include
->
+  <include href="footer.html"><!-- template footer -->
