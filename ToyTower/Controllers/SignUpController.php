@@ -43,7 +43,7 @@ class SignUpController{
 			// save to db
 			$this->model->addData();
 			// reroute to the listing page
-			$this->f3->reroute('@signUpCreate');
+			$this->f3->reroute('@home');
 	}
 
 	}
