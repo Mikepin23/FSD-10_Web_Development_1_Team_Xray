@@ -85,7 +85,6 @@
                 value="<?= ($createAccount['UserID']) ?>"
               />
               <button
-                id="SubmitButton"
                 class="btn btn-dark btn-block d-flex flex-row justify-content-between align-items-center"
                 type="submit"
                 value="Create Account"
