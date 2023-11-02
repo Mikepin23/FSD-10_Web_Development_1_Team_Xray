@@ -19,7 +19,7 @@
                 </div>
                 <a
                   class="card__button"
-                  href="<?= ($BASE) ?><?= (Base::instance()->alias('toyRead')) ?>"
+                  href="<?= ($BASE) ?><?= (Base::instance()->alias('toyReadBrands')) ?>?brandID=<?= ($b['BrandID']) ?>"
                   >See More</a
                 >
               </div>

@@ -70,10 +70,10 @@
                 >
               </li>
               <li class="nav-item nav-justified">
-                <a class="nav-link" href="#">Top Toys</a>
+                <a class="nav-link" href="<?= ($BASE) ?><?= (Base::instance()->alias('ageRangeRead')) ?>">Ages</a>
               </li>
               <li class="nav-item nav-justified">
-                <a class="nav-link" href="#">Deals</a>
+                <a class="nav-link" href="<?= ($BASE) ?><?= (Base::instance()->alias('toyRead')) ?>">All Toys</a>
               </li>
               <li class="nav-item">
                 <form class="form-inline my-2 my-lg-0">
@@ -106,7 +106,7 @@
               <li class="nav-item icon">
                 <a
                   class="nav-link"
-                  href="<?= ($BASE) ?><?= (Base::instance()->alias('signUpRead')) ?>"
+                  href="<?= ($BASE) ?><?= (Base::instance()->alias('signUpCreate')) ?>"
                 >
                   <button class="btn btn-dark my-2 my-sm-0" type="submit">
                     Sign Up

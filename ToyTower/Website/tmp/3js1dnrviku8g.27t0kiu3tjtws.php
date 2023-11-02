@@ -67,7 +67,7 @@
                 <a class="nav-link" href="<?= ($BASE) ?><?= (Base::instance()->alias('brandRead')) ?>">Brands</a>
               </li>
               <li class="nav-item nav-justified">
-                <a class="nav-link" href="#">Top Toys</a>
+                <a class="nav-link" href="<?= ($BASE) ?><?= (Base::instance()->alias('ageRangeRead')) ?>">Ages</a>
               </li>
               <li class="nav-item nav-justified">
                 <a class="nav-link" href="#">Deals</a>
@@ -101,7 +101,7 @@
                 </a>
               </li>
               <li class="nav-item icon">
-                <a class="nav-link" href="<?= ($BASE) ?><?= (Base::instance()->alias('signUpRead')) ?>">
+                <a class="nav-link" href="<?= ($BASE) ?><?= (Base::instance()->alias('signUpCreate')) ?>">
                   <button class="btn btn-dark my-2 my-sm-0" type="submit">
                     Sign Up
                   </button>

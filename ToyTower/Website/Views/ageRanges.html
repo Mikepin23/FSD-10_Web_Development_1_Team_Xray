@@ -6,17 +6,17 @@
   <section id="toy-brands">
     <div class="container mt-5">
       <div class="row">
-        <repeat group="{{ @brands }}" value="{{ @b }}">
+        <repeat group="{{ @ageranges }}" value="{{ @a }}">
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="card">
               <img
                 class="card__background"
-                src="{{ @b['BrandImage'] }}"
+                src="{{ @a['AgeRangeImage'] }}"
                 alt=""
               />
               <div class="card__content | flow">
                 <div class="card__content--container | flow">
-                  <h2 class="card__title">{{ @b['BrandName'] }}</h2>
+                  <h2 class="card__title">{{ @a['Range'] }}</h2>
                   <p class="card__description">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Rerum in labore laudantium deserunt fugiat numquam.
@@ -24,7 +24,7 @@
                 </div>
                 <a
                   class="card__button"
-                  href="{{ @BASE }}{{ 'toyReadBrands' | alias }}?brandID={{ @b['BrandID'] }}"
+                  href="{{ @BASE }}{{ 'toyReadAgeRanges' | alias }}?ageRangeID={{ @a['AgeRangeID'] }}"
                   >See More</a
                 >
               </div>

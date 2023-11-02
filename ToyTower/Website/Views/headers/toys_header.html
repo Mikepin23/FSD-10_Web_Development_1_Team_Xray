@@ -70,10 +70,10 @@
                 >
               </li>
               <li class="nav-item nav-justified">
-                <a class="nav-link" href="#">Top Toys</a>
+                <a class="nav-link" href="{{ @BASE }}{{ 'ageRangeRead' | alias }}">Ages</a>
               </li>
               <li class="nav-item nav-justified">
-                <a class="nav-link" href="#">Deals</a>
+                <a class="nav-link" href="{{ @BASE }}{{ 'toyRead' | alias }}">All Toys</a>
               </li>
               <li class="nav-item">
                 <form class="form-inline my-2 my-lg-0">
@@ -106,7 +106,7 @@
               <li class="nav-item icon">
                 <a
                   class="nav-link"
-                  href="{{ @BASE }}{{ 'signUpRead' | alias }}"
+                  href="{{ @BASE }}{{ 'signUpCreate' | alias }}"
                 >
                   <button class="btn btn-dark my-2 my-sm-0" type="submit">
                     Sign Up

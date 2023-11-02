@@ -1,22 +1,17 @@
-<include href="headers/brands_header.html"
-  ><!-- template header -->
-
-  <h1>Brands</h1>
-
-  <section id="toy-brands">
+<?php echo $this->render('headers/brands_header.html',NULL,get_defined_vars(),0); ?>
     <div class="container mt-5">
       <div class="row">
-        <repeat group="{{ @brands }}" value="{{ @b }}">
+        <?php foreach (($ageranges?:[]) as $a): ?>
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="card">
               <img
                 class="card__background"
-                src="{{ @b['BrandImage'] }}"
+                src="<?= ($a['AgeRangeImage']) ?>"
                 alt=""
               />
               <div class="card__content | flow">
                 <div class="card__content--container | flow">
-                  <h2 class="card__title">{{ @b['BrandName'] }}</h2>
+                  <h2 class="card__title"><?= ($a['Range']) ?></h2>
                   <p class="card__description">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Rerum in labore laudantium deserunt fugiat numquam.
@@ -24,16 +19,16 @@
                 </div>
                 <a
                   class="card__button"
-                  href="{{ @BASE }}{{ 'toyReadBrands' | alias }}?brandID={{ @b['BrandID'] }}"
+                  href="<?= ($BASE) ?><?= (Base::instance()->alias('toyReadAgeRanges')) ?>?ageRangeID=<?= ($a['AgeRangeID']) ?>"
                   >See More</a
                 >
               </div>
             </div>
           </div>
-        </repeat>
+        <?php endforeach; ?>
       </div>
     </div>
   </section>
 
-  <include href="footer.html"><!-- template footer --></include></include
+  <?php echo $this->render('footer.html',NULL,get_defined_vars(),0); ?></include
 >

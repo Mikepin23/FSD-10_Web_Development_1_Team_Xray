@@ -5,7 +5,7 @@
         <div class="text-center">
           <h3>Login</h3>
           <span class="abt"
-            >Don't have an account? <a href="#">Create an Account</a></span
+            >Don't have an account? <a href="<?= ($BASE) ?><?= (Base::instance()->alias('signUpCreate')) ?>">Create an Account</a></span
           >
         </div>
         <div class="form mt-3">
