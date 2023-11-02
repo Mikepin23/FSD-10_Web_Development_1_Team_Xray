@@ -1,10 +1,10 @@
 <?php 
 
-class Login extends Model{
+class Cart extends Model{
 
 	public function __construct(){
 		// setup db model to use the categories table
-		parent::__construct('users');
+		parent::__construct('brands');
 	}
 
 	/**
@@ -14,7 +14,7 @@ class Login extends Model{
 	 * @return object
 	 */
 	public function getById($id){
-		return $this->findone(['UserID=?', $id]);
+		return $this->findone(['BrandID=?', $id]);
 	}
 
 	/**
@@ -23,7 +23,7 @@ class Login extends Model{
 	 * @param integer $id
 	 */
 	public function updateData($id){
-		$this->load( ['UserID=?', $id ]);
+		$this->load( ['BrandID=?', $id ]);
 		$this->copyFrom('POST');
 		$this->update();
 	}
@@ -44,7 +44,7 @@ class Login extends Model{
 	 * @param integer $id
 	 */
 	public function deleteData($id){
-		$this->load( ['UserID=?', $id] );
+		$this->load( ['BrandID=?', $id] );
 		// check is exists
 		$this->erase();
 	}
@@ -58,7 +58,7 @@ class Login extends Model{
 		$rows = $this->all();
 		$data = [];
 		foreach($rows as $r)
-			$data[$r['UserID']] = $r['Username'];
+			$data[$r['BrandID=?']] = $r['BrandName'];
 
 		return $data;
 	}

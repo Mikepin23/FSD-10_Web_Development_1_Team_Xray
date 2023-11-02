@@ -1,4 +1,4 @@
-<?php echo $this->render('headers/createAccount_header.html',NULL,get_defined_vars(),0); ?></include
+<?php echo $this->render('headers/createAccount_header.php',NULL,get_defined_vars(),0); ?></include
 ><!-- template header -->
 
 <section id="create-account">
@@ -7,10 +7,12 @@
       <h3>Create an account</h3>
       <span class="abt"
         >Already have an account?
+        <!-- Brings you to the login page -->
         <a href="<?= ($BASE) ?><?= (Base::instance()->alias('loginRead')) ?>">Login</a></span
       >
     </div>
     <div class="form mt-3">
+      <!-- The form -->
       <form action="" method="POST">
         <?php if ($error): ?>
           <p><?= ($error) ?></p>
@@ -21,7 +23,7 @@
             name="Username"
             class="form-control"
             placeholder="Username"
-            value="<?= ($createAccount['Username']) ?>"
+            value="<?= ($createAccount['Username']) ?>" 
           />
         </div>
         <div class="inputbox">
@@ -98,5 +100,5 @@
   </div>
 </section>
 
-<?php echo $this->render('footer.html',NULL,get_defined_vars(),0); ?></include
+<?php echo $this->render('footer.php',NULL,get_defined_vars(),0); ?></include
 ><!-- template footer -->

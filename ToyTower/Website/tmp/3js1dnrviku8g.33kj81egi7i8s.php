@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><?= ($pageTitle) ?></title>
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/login_style.css" />
+    <link rel="stylesheet" href="css/homepage_style.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <script src="homepage.js"></script>
   
     <!-- Bootstrap CSS Link -->
     <link

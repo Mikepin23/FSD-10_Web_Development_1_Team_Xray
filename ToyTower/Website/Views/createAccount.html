@@ -1,4 +1,4 @@
-<include href="headers/createAccount_header.html"></include
+<include href="headers/createAccount_header.php"></include
 ><!-- template header -->
 
 <section id="create-account">
@@ -7,10 +7,12 @@
       <h3>Create an account</h3>
       <span class="abt"
         >Already have an account?
+        <!-- Brings you to the login page -->
         <a href="{{ @BASE }}{{ 'loginRead' | alias }}">Login</a></span
       >
     </div>
     <div class="form mt-3">
+      <!-- The form -->
       <form action="" method="POST">
         <check if="{{ @error }}">
           <p>{{ @error }}</p>
@@ -21,7 +23,7 @@
             name="Username"
             class="form-control"
             placeholder="Username"
-            value="{{ @createAccount['Username'] }}"
+            value="{{ @createAccount['Username'] }}" 
           />
         </div>
         <div class="inputbox">
@@ -98,5 +100,5 @@
   </div>
 </section>
 
-<include href="footer.html"></include
+<include href="footer.php"></include
 ><!-- template footer -->

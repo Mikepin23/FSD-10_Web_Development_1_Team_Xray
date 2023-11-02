@@ -1,11 +1,15 @@
+<?php 
+  session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><?= ($pageTitle) ?></title>
+    <title>{{ @pageTitle }}</title>
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/login_style.css" />
+    <link rel="stylesheet" href="css/brands_style.css" />
   
     <!-- Bootstrap CSS Link -->
     <link
@@ -22,7 +26,7 @@
   <body>
     <section id="logo" class="bg-blue">
       <div class="container d-flex justify-content-center align-items-center">
-        <a class="navbar-logo" href="<?= ($BASE) ?><?= (Base::instance()->alias('home')) ?>">
+        <a class="navbar-logo" href="{{ @BASE }}{{ 'home' | alias }}">
           <img
             src="img/logo/ToyTowerLogo.png"
             alt="ToyTower Logo"
@@ -60,16 +64,16 @@
                 </a>
               </li> -->
               <li class="nav-item nav-justified">
-                <a class="nav-link n" href="<?= ($BASE) ?><?= (Base::instance()->alias('catRead')) ?>">Categories</a>
+                <a class="nav-link n" href="{{ @BASE }}{{ 'catRead' | alias }}">Categories</a>
               </li>
               <li class="nav-item nav-justified">
-                <a class="nav-link" href="<?= ($BASE) ?><?= (Base::instance()->alias('brandRead')) ?>">Brands</a>
+                <a class="nav-link" href="{{ @BASE }}{{ 'brandRead' | alias }}">Brands</a>
               </li>
               <li class="nav-item nav-justified">
-                <a class="nav-link" href="<?= ($BASE) ?><?= (Base::instance()->alias('ageRangeRead')) ?>">Ages</a>
+                <a class="nav-link" href="{{ @BASE }}{{ 'ageRangeRead' | alias }}">Ages</a>
               </li>
               <li class="nav-item nav-justified">
-                <a class="nav-link" href="<?= ($BASE) ?><?= (Base::instance()->alias('toyRead')) ?>">All Toys</a>
+                <a class="nav-link" href="{{ @BASE }}{{ 'toyRead' | alias }}">All Toys</a>
               </li>
               <li class="nav-item">
                 <form class="form-inline my-2 my-lg-0">
@@ -88,19 +92,19 @@
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="<?= ($BASE) ?><?= (Base::instance()->alias('cartRead')) ?>"
+                <a class="nav-link" href="{{ @BASE }}{{ 'cartRead' | alias }}"
                   ><i class="fas fa-shopping-cart icon"></i
                 ></a>
               </li>
               <li class="nav-item icon">
-                <a class="nav-link" href="<?= ($BASE) ?><?= (Base::instance()->alias('loginRead')) ?>">
+                <a class="nav-link" href="{{ @BASE }}{{ 'loginRead' | alias }}">
                   <button class="btn btn-dark my-2 my-sm-0" type="submit">
                     Login
                   </button>
                 </a>
               </li>
               <li class="nav-item icon">
-                <a class="nav-link" href="<?= ($BASE) ?><?= (Base::instance()->alias('signUpCreate')) ?>">
+                <a class="nav-link" href="{{ @BASE }}{{ 'signUpCreate' | alias }}">
                   <button class="btn btn-dark my-2 my-sm-0" type="submit">
                     Sign Up
                   </button>

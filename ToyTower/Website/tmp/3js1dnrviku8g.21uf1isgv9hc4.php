@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><?= ($pageTitle) ?></title>
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/login_style.css" />
-  
+    <link rel="stylesheet" href="css/toys_style.css" />
+
     <!-- Bootstrap CSS Link -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css"
@@ -60,10 +60,14 @@
                 </a>
               </li> -->
               <li class="nav-item nav-justified">
-                <a class="nav-link n" href="<?= ($BASE) ?><?= (Base::instance()->alias('catRead')) ?>">Categories</a>
+                <a class="nav-link n" href="<?= ($BASE) ?><?= (Base::instance()->alias('catRead')) ?>"
+                  >Categories</a
+                >
               </li>
               <li class="nav-item nav-justified">
-                <a class="nav-link" href="<?= ($BASE) ?><?= (Base::instance()->alias('brandRead')) ?>">Brands</a>
+                <a class="nav-link" href="<?= ($BASE) ?><?= (Base::instance()->alias('brandRead')) ?>"
+                  >Brands</a
+                >
               </li>
               <li class="nav-item nav-justified">
                 <a class="nav-link" href="<?= ($BASE) ?><?= (Base::instance()->alias('ageRangeRead')) ?>">Ages</a>
@@ -100,7 +104,10 @@
                 </a>
               </li>
               <li class="nav-item icon">
-                <a class="nav-link" href="<?= ($BASE) ?><?= (Base::instance()->alias('signUpCreate')) ?>">
+                <a
+                  class="nav-link"
+                  href="<?= ($BASE) ?><?= (Base::instance()->alias('signUpCreate')) ?>"
+                >
                   <button class="btn btn-dark my-2 my-sm-0" type="submit">
                     Sign Up
                   </button>

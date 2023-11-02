@@ -1,4 +1,4 @@
-<?php echo $this->render('headers/homepage_header.html',NULL,get_defined_vars(),0); ?><!-- template header -->
+<?php echo $this->render('headers/homepage_header.php',NULL,get_defined_vars(),0); ?><!-- template header -->
 
   <section id="homepage-body">
     <div class="w3-content w3-display-container">
@@ -101,4 +101,4 @@
       </div>
     </section> -->
 
-    <?php echo $this->render('footer.html',NULL,get_defined_vars(),0); ?><!-- template footer -->
+    <?php echo $this->render('footer.php',NULL,get_defined_vars(),0); ?><!-- template footer -->

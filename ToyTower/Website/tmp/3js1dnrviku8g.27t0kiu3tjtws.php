@@ -70,7 +70,7 @@
                 <a class="nav-link" href="<?= ($BASE) ?><?= (Base::instance()->alias('ageRangeRead')) ?>">Ages</a>
               </li>
               <li class="nav-item nav-justified">
-                <a class="nav-link" href="#">Deals</a>
+                <a class="nav-link" href="<?= ($BASE) ?><?= (Base::instance()->alias('toyRead')) ?>">All Toys</a>
               </li>
               <li class="nav-item">
                 <form class="form-inline my-2 my-lg-0">

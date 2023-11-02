@@ -1,4 +1,4 @@
-<?php echo $this->render('headers/categories_header.html',NULL,get_defined_vars(),0); ?>
+<?php echo $this->render('headers/categories_header.php',NULL,get_defined_vars(),0); ?>
     <div class="container mt-5">
       <div class="row">
         <?php foreach (($categories?:[]) as $c): ?>
@@ -30,5 +30,5 @@
     </div>
   </section>
 
-  <?php echo $this->render('footer.html',NULL,get_defined_vars(),0); ?></include
+  <?php echo $this->render('footer.php',NULL,get_defined_vars(),0); ?></include
 >

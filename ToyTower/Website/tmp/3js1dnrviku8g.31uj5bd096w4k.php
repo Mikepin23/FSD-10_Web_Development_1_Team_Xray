@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><?= ($pageTitle) ?></title>
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/login_style.css" />
+    <link rel="stylesheet" href="css/categories_style.css" />
   
     <!-- Bootstrap CSS Link -->
     <link

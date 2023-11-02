@@ -49,7 +49,7 @@ $f3->route('GET @cartDelete: /delete/@cart', 'CartController->delete');
 /**
  * Login CRUD
  */
-$f3->route('GET @loginRead: /login', 'LoginController->login');
+$f3->route('GET @loginRead: /login', 'PageController->login');
 
 // $f3->route('GET @loginUpdate: /update/@login', 'LoginController->update');
 $f3->route('POST @loginUpdate: /update/@login', 'LoginController->loginSave');

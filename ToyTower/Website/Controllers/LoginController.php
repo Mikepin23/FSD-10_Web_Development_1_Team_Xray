@@ -1,9 +1,9 @@
 <?php 
 
 /**
- * Logic for categories
+ * Logic for Login
  */
-class CartController{
+class LoginController{
 
 	private $model; // db access
 	private $f3; // framework instance
@@ -14,27 +14,12 @@ class CartController{
 	public function __construct($f3Var){
 
 		$this->f3 = $f3Var; // f3 instance
-		$this->model = new Category();
+		$this->model = new Login();
 
-		$this->f3->set('pageTitle', "Categories"); // default page title
+		$this->f3->set('pageTitle', "Login | ToyTower"); // default page title
 		$this->f3->set('error', ""); //default error message
 	}
 
-	/**
-	 * Displays a listing of all the categories
-	 */
-	public function listing(){
-
-		// fetch the categories from the db
-		$categories = $this->model->all();
-
-		// set my category for the view
-		$this->f3->set('categories', $categories);
-		
-		// show the view
-		echo Template::instance()->render('categories/listing.html');
-		
-	}
 
 	/**
 	 * Displays form to update given cateogory

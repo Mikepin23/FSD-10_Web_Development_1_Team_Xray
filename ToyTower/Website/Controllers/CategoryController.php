@@ -35,24 +35,5 @@ class CategoryController{
 		echo Template::instance()->render('categories.html');
 		
 	}
-
-	/**
-	 * Displays form to update given cateogory
-	 */
-	public function update(){
-		//get the id from the URL
-		$getParamId = $this->f3->get('PARAMS.cat');
-
-		// fetch data from db
-		$dbResult = $this->model->getById( $getParamId );
-		
-		// TODO: check that dbResults actully contains something else reroute
-
-		// set my category for the view
-		$this->f3->set("category", $dbResult);
-
-		//show the view
-		echo Template::instance()->render('categories/form.html');
-	}
-
+	
 }
