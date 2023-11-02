@@ -20,17 +20,6 @@ class SignUpController{
 		$this->f3->set('error', ""); //default error message
 	}
 
-
-	// function signUp($f3){
-
-	// 	// create template instance to show visual to users
-	// 	$f3->set("pageTitle", "Create Account | ToyTower");
-	// 	$this->f3->set('createAccount', ['UserID'=>'', 'Username'=>'', 'UserPass'=>''] );
-
-	// 	echo Template::instance()->render('createAccount.html');
-
-	// }
-
 	/**
 	 * Displays form to create a new
 	 */

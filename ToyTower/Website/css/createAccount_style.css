@@ -3,6 +3,15 @@
   * https://bbbootstrap.com/snippets/bootstrap-create-account-signup-form-input-groups-60573468#
 **/
 
+#SubmitButton {
+  background-color: #4caf50; /* Set background color */
+  color: white; /* Set text color */
+  padding: 10px 20px; /* Set padding */
+  border: none; /* Remove border */
+  cursor: pointer; /* Add a pointer cursor on hover */
+  /* Add any other styles you want to apply */
+}
+
 #create-account {
   display: flex;
   justify-content: center;
@@ -72,3 +81,5 @@
   height: 24px;
   margin-top: 12px;
 }
+
+

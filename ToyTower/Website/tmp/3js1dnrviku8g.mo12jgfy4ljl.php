@@ -16,19 +16,46 @@
           <p><?= ($error) ?></p>
         <?php endif; ?>
         <div class="inputbox">
-          <input type="text" name="Username" class="form-control" placeholder="Username" value="<?= ($createAccount['Username']) ?>" />
+          <input
+            type="text"
+            name="Username"
+            class="form-control"
+            placeholder="Username"
+            value="<?= ($createAccount['Username']) ?>"
+          />
         </div>
         <div class="inputbox">
-          <input type="password" name="UserPass" class="form-control" placeholder="Password" value="<?= ($createAccount['UserPass']) ?>" />
+          <input
+            type="password"
+            name="UserPass"
+            class="form-control"
+            placeholder="Password"
+            value="<?= ($createAccount['UserPass']) ?>"
+          />
         </div>
         <div class="inputbox">
-          <input type="text" name="UserFN" class="form-control" placeholder="First Name" />
+          <input
+            type="text"
+            name="UserFN"
+            class="form-control"
+            placeholder="First Name"
+          />
         </div>
         <div class="inputbox">
-          <input type="text" name="UserLN" class="form-control" placeholder="Last Name" />
+          <input
+            type="text"
+            name="UserLN"
+            class="form-control"
+            placeholder="Last Name"
+          />
         </div>
         <div class="inputbox">
-          <input type="text" name="UserEmail" class="form-control" placeholder="Email" />
+          <input
+            type="text"
+            name="UserEmail"
+            class="form-control"
+            placeholder="Email"
+          />
         </div>
         <div class="inputbox">
           <input
@@ -39,23 +66,32 @@
           />
         </div>
         <div class="inputbox">
-          <input type="text" name="PostalCode" class="form-control" placeholder="Postal Code" />
+          <input
+            type="text"
+            name="PostalCode"
+            class="form-control"
+            placeholder="Postal Code"
+          />
         </div>
         <div class="mt-4 proceed">
-          <button
-            class="btn btn-dark btn-block d-flex flex-row justify-content-between align-items-center"
-          >
-            <div class="text-right">
-              <span>
-                <input
-                  type="hidden"
-                  name="UserID"
-                  value="<?= ($createAccount['UserID']) ?>"
-                />
-                <input type="submit" value="Create Account" />
-              </span>
-            </div>
-          </button>
+          <div class="text-right">
+            <span>
+              <input
+                id="CreateAccountButton"
+                type="hidden"
+                name="UserID"
+                value="<?= ($createAccount['UserID']) ?>"
+              />
+              <button
+                id="SubmitButton"
+                class="btn btn-dark btn-block d-flex flex-row justify-content-between align-items-center"
+                type="submit"
+                value="Create Account"
+              >
+                Create Account
+              </button>
+            </span>
+          </div>
         </div>
       </form>
     </div>
