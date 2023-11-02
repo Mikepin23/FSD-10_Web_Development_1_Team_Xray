@@ -1,0 +1,39 @@
+<include href="headers/categories_header.php"
+  ><!-- template header -->
+
+  <h1>Categories</h1>
+
+  <section id="toy-categories">
+    <div class="container mt-5">
+      <div class="row">
+        <repeat group="{{ @categories }}" value="{{ @c }}">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card">
+              <img
+                class="card__background"
+                src="{{ @c['CategoryImage'] }}"
+                alt=""
+              />
+              <div class="card__content | flow">
+                <div class="card__content--container | flow">
+                  <h2 class="card__title">{{ @c['CategoryName'] }}</h2>
+                  <p class="card__description">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Rerum in labore laudantium deserunt fugiat numquam.
+                  </p>
+                </div>
+                <a
+                  class="card__button"
+                  href="{{ @BASE }}{{ 'toyReadCategories' | alias }}?categoryID={{ @c['CategoryID'] }}"
+                  >See More</a
+                >
+              </div>
+            </div>
+          </div>
+        </repeat>
+      </div>
+    </div>
+  </section>
+
+  <include href="footer.php"><!-- template footer --></include></include
+>

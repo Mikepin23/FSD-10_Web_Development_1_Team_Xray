@@ -1,0 +1,37 @@
+2023-10-30
+
+/* --------------------------------------------------------- */
+
+General Discussion:
+
+- Need to populate the databas with toys. Need to implement routes to pages using the Fat-Free framework.
+
+/* --------------------------------------------------------- */
+
+1) What we have done since the last meeting
+
+Michael: 
+
+- populated some tables in the database, added fatfree to the project folder, started index.php
+
+Zachary: 
+
+- Worked on the homepage
+
+/* --------------------------------------------------------- */
+
+2) What we plan to do today
+
+Michael: 
+
+- Populate the toys table with toys and paths to their images. Work on php.
+
+Zachary: 
+
+- Populate the toys table with toys and paths to their images. Work on php.
+
+/* --------------------------------------------------------- */
+
+3) Likely problems we may face 
+
+- Tables will have to be re-adjusted depending on toys selected for the database.

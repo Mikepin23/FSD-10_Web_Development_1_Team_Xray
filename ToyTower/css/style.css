@@ -1,0 +1,150 @@
+/* Google font */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Pacifico&family=Playpen+Sans:wght@400;600&display=swap");
+
+* {
+  font-family: "Josefin Sans", sans-serif;
+  font-family: "Pacifico", cursive;
+  font-family: "Playpen Sans", cursive;
+}
+
+/* Background color of the header and footer */
+.bg-blue {
+  background-color: rgb(140, 190, 255);
+}
+
+/*
+**
+    Navigation bar
+**
+*/
+
+.search-container {
+  position: relative;
+}
+
+.form-control::placeholder:before {
+  font-family: "Font Awesome 6 Solid";
+  content: "\f002"; /* Unicode for the magnifying glass icon in Font Awesome */
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #888;
+  font-size: 18px;
+}
+
+#navigation .navbar-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+#navigation .navbar-nav .form-inline {
+  display: flex;
+  align-items: center;
+}
+
+#navigation .input-group {
+  width: 500px;
+  height: 40px;
+  font-size: 18px;
+}
+
+.input-group.align-bottom {
+  align-items: flex-end;
+  display: flex;
+}
+
+/*
+**
+    icons
+**
+*/
+
+/* Custom CSS to increase icon size and change color */
+.icon {
+  color: black;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.icon:hover {
+  transform: scale(1.5);
+}
+
+/* Custom CSS to increase icon size and change color */
+.larger-icon {
+  font-size: 30px;
+  color: white;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.larger-icon:hover {
+  transform: scale(1.5);
+  color: black;
+}
+
+/*
+**
+    The underlining hover effect
+**
+*/
+
+/* Custom CSS for navigation hover effect */
+.navbar-nav .nav-justified {
+  position: relative;
+  text-decoration: none;
+  color: black;
+}
+
+.navbar-nav .nav-justified::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 10px;
+  background-color: rgb(140, 190, 255);
+  transition: 0.8s ease;
+}
+
+.navbar-nav .nav-justified:hover::after {
+  width: 100%;
+}
+
+/*
+**
+    footer
+**
+*/
+
+#above-footer {
+  margin: 10px auto 10px auto;
+}
+
+/* Custom CSS for navigation hover effect */
+#above-footer a {
+  position: relative;
+  text-decoration: none;
+  color: black;
+  padding: 20px 20px 10px 20px;
+}
+
+#above-footer a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 10px;
+  background-color: rgb(140, 190, 255);
+  transition: 0.8s ease;
+}
+
+#above-footer a:hover::after {
+  width: 100%;
+}
+
+#footer p {
+  margin-top: 20px;
+}
