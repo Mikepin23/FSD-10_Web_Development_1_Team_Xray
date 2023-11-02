@@ -1,0 +1,37 @@
+2023-11-02
+
+/* --------------------------------------------------------- */
+
+General Discussion:
+
+- We agreed that the login and cart pages are the next two problems to solve as well as appllying a session or cookie.
+
+/* --------------------------------------------------------- */
+
+1) What we have done since the last meeting
+
+Michael: 
+
+- Toy pages all work now. Routes work with most links and submissions.
+
+Zachary: 
+
+- Sign up page connects to database and stores users. Subsrcibe button works and stores in the database. Started login page.
+
+/* --------------------------------------------------------- */
+
+2) What we plan to do today
+
+Michael: 
+
+- Work on the cart page
+
+Zachary: 
+
+- Work on the login page
+
+/* --------------------------------------------------------- */
+
+3) Likely problems we may face 
+
+- Applying a session to work or cookie. Without it we cant use log in or cart.
