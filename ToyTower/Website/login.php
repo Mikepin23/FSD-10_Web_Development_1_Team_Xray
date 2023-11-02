@@ -1,11 +1,18 @@
+<?php
+session_start();
+if (isset($_SESSION['error'])) {
+    echo "<script type='text/javascript'>alert('" . $_SESSION['error'] . "');</script>";
+    unset($_SESSION['error']);
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ToyTower</title>
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/createAccount_style.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/login_style.css" />
     <!-- Bootstrap CSS Link -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css"
@@ -23,7 +30,7 @@
       <div class="container d-flex justify-content-center align-items-center">
         <a class="navbar-logo" href="#">
           <img
-            src="../img/logo/ToyTowerLogo.png"
+            src="img/logo/ToyTowerLogo.png"
             alt="ToyTower Logo"
             height="200px"
           />
@@ -111,93 +118,46 @@
       </nav>
     </section>
 
-    <!-- <section id="create-account">
+    <section id="login">
       <div class="card">
         <div class="text-center">
-          <h3>Create an account</h3>
+          <h3>Login</h3>
           <span class="abt"
-            >Already have an account? <a href="#">Sign In</a></span
+            >Don't have an account? <a href="#">Create an Account</a></span
           >
         </div>
         <div class="form mt-3">
           <div class="inputbox">
             <input type="text" class="form-control" placeholder="Username" />
           </div>
-          <div class="input-group inputbox">
-            <input type="text" placeholder="First name" class="form-control" />
-            <input type="text" placeholder="Last name" class="form-control" />
-          </div>
           <div class="inputbox">
-            <input type="text" class="form-control" placeholder="Email" />
-          </div>
-        </div>
-        <div class="mt-4 proceed">
-          <button
-            class="btn btn-primary btn-block d-flex flex-row justify-content-between align-items-center"
-          >
-            <div class="text-right"><span>Proceed to next step</span></div>
-            <div class="text-right">
-              <span
-                ><i class="fa fa-long-arrow-right align-items-center"></i
-              ></span>
-            </div>
-          </button>
-        </div>
-        <div class="mt-1">
-          <div class="form-check">
             <input
-              class="form-check-input"
-              type="checkbox"
-              value=""
-              id="flexCheckDefault"
+              type="password"
+              class="form-control"
+              placeholder="Password"
             />
-            <label class="form-check-label" for="flexCheckDefault">
-              I have read and agree to the <a href="#">Terms of service</a>
-            </label>
           </div>
-        </div>
-      </div>
-    </section> -->
-
-    <section id="create-account">
-      <div class="card">
-        <div class="text-center">
-          <h3>Create an account</h3>
-          <span class="abt"
-            >Already have an account? <a href="#">Login</a></span
-          >
-        </div>
-        <form method="POST" action="createAccount.php">
-          <div class="form mt-3">
-              <div class="inputbox">
-                  <input type="text" name="username" class="form-control" placeholder="Username" />
-              </div>
-              <div class="inputbox">
-                  <input type="password" name="password" class="form-control" placeholder="Password" />
-              </div>
-              <div class="inputbox">
-                  <input type="text" name="firstname" class="form-control" placeholder="First Name" />
-              </div>
-              <div class="inputbox">
-                  <input type="text" name="lastname" class="form-control" placeholder="Last Name" />
-              </div>
-              <div class="inputbox">
-                  <input type="text" name="email" class="form-control" placeholder="Email" />
-              </div>
-              <div class="inputbox">
-                  <input type="text" name="phone" class="form-control" placeholder="Phone xxx-xxx-xxxx" />
-              </div>
-              <div class="inputbox">
-                  <input type="text" name="postalcode" class="form-control" placeholder="Postal Code" />
-              </div>
+          <div class="mt-1">
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="flexCheckDefault"
+              />
+              <label class="form-check-label" for="flexCheckDefault">
+                Remember Me
+              </label>
+            </div>
           </div>
           <div class="mt-4 proceed">
-              <button type="submit"
-                  class="btn btn-dark btn-block d-flex flex-row justify-content-between align-items-center">
-                  <div class="text-right"><span>Create an Account</span></div>
-              </button>
+            <button
+              class="btn btn-dark btn-block d-flex flex-row justify-content-between align-items-center"
+            >
+              <div class="text-right"><span>Login</span></div>
+            </button>
           </div>
-        </form>
+        </div>
       </div>
     </section>
 

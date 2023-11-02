@@ -53,6 +53,12 @@ CREATE TABLE Toys
 )
 ;
 
+CREATE TABLE email_subscriber (
+    ID INT AUTO_INCREMENT,
+    EmailAddress VARCHAR(255) NOT NULL,
+    PRIMARY KEY (ID)
+);
+
 /*
 CREATE TABLE Transactions 
 (
