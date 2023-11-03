@@ -1,0 +1,43 @@
+2023-11-03
+
+/* --------------------------------------------------------- */
+
+General Discussion:
+
+- Prioritized our tasks and ranked them based on importance. 
+
+/* --------------------------------------------------------- */
+
+1) What we have done since the last meeting
+
+Michael: 
+
+- Merged our work together. Started the cart page.
+
+Zachary: 
+
+- Merged our work together. Set up the DbConnect file and the user variable. Completed the login page.
+
+/* --------------------------------------------------------- */
+
+2) What we plan to do today
+
+Michael: 
+
+- Continue with the cart page.
+
+Zachary: 
+
+- Going to make the header responsive whether someone is signed in or not.
+
+/* --------------------------------------------------------- */
+
+3) Likely problems we may face 
+
+Michael: 
+
+- Items don't want to store in the $_SESSION['cart'], items won't display
+
+Zachary: 
+
+- Buttons won't switch. Difficulties logging in as admin.
