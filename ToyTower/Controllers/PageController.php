@@ -3,9 +3,15 @@
 /**
  * Handle pages without database connections
  */
-class PageController{
+class PageController {
 
 	function homepage($f3){
+
+		// Check if the 'user' session variable exists
+		$user = isset($_SESSION['user']) ? $_SESSION['user'] : null;
+
+		// Set the 'username' variable
+		$f3->set('username', $user);
 
 		// create template instance to show visual to users
 		$f3->set("pageTitle", "Home | ToyTower");
@@ -42,6 +48,11 @@ class PageController{
 	}
 
 	function login($f3){
+    $session = $f3->get('SESSION');
+    if (isset($session['user'])) {
+        $username = $session['user'];
+        $f3->set('username', $username);
+    }
 
 		// create template instance to show visual to users
 		$f3->set("pageTitle", "Login | ToyTower");

@@ -1,4 +1,6 @@
 <?php
+require 'DBconnect.php';
+require 'session.php';
 //TODO:  fix alias prefix
 
 // will automatically load any library required from our composer

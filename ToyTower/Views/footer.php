@@ -1,3 +1,25 @@
+<?php
+require 'DBconnect.php';
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  if(isset($_POST['email'])){
+      // Prepare statement
+      $stmt = $conn->prepare("INSERT INTO email_subscriber (EmailAddress) VALUES (?)");
+      $stmt->bind_param("s", $_POST['email']);
+
+      // Execute the statement
+      if ($stmt->execute()) {
+          echo "You have been subscribed!";
+      } else {
+          echo "There was an error. Please try again.";
+      }
+
+      $stmt->close();
+  }
+}
+
+$conn->close();
+?>
+
 <section id="newsletter">
   <footer class="bg-blue text-white py-5">
     <div class="container">
@@ -94,39 +116,3 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
-<?php
-session_start();
-
-$servername = "localhost";
-$username = "fsduser";
-$password = "myDBpw";
-$dbname = "fsd10_xray";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if(isset($_POST['email'])){
-        // Prepare statement
-        $stmt = $conn->prepare("INSERT INTO email_subscriber (EmailAddress) VALUES (?)");
-        $stmt->bind_param("s", $_POST['email']);
-
-        // Execute the statement
-        if ($stmt->execute()) {
-            echo "You have been subscribed!";
-        } else {
-            echo "There was an error. Please try again.";
-        }
-
-        $stmt->close();
-    }
-}
-
-$conn->close();
-?>

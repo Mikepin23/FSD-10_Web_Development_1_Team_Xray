@@ -32,7 +32,6 @@
     </div>
 
     <br />
-
     <div class="banner">
       <h1>Shop By Brand</h1>
     </div>
