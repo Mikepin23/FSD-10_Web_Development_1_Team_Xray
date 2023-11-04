@@ -4,63 +4,30 @@ class Cart extends Model{
 
 	public function __construct(){
 		// setup db model to use the categories table
-		parent::__construct('brands');
+		parent::__construct('toys');
 	}
 
-	/**
-	 * Retrieve a single value for the table
-	 *
-	 * @param int $id
-	 * @return object
-	 */
-	public function getById($id){
-		return $this->findone(['BrandID=?', $id]);
-	}
+	public function addToCart($item) {
 
-	/**
-	 * Update the database from given category from POST data
-	 *
-	 * @param integer $id
-	 */
-	public function updateData($id){
-		$this->load( ['BrandID=?', $id ]);
-		$this->copyFrom('POST');
-		$this->update();
-	}
+		if( !isset( $_SESSION['cart'] ) ) {
+			$_SESSION['cart'] = [];
+		} 
+		
+		if ( !isset ( $_SESSION['cart'][$item]) ) {
+			$_SESSION['cart'][$item] = 0;
+		} 
 
-	/**
-	 * Insert into the database from POST data
-	 *
-	 * @param integer $id
-	 */
-	public function addData(){
-		$this->copyFrom('POST');
-		$this->save();
-	}
+		$val = $this->findone(['ToysID=?', $item]);
+		if ($val['Stock'] < $_SESSION['cart'][$item] + 1){
+			// throw error
+			print_r('Error'); // TODO: javascript alert that there is no stock available
+			if ($_SESSION['cart'][$item] == 0){
+				unset($_SESSION['cart'][$item]);
+			}
+			return;
+		}
+		$_SESSION['cart'][$item] = $_SESSION['cart'][$item] + 1;
+}
 
-	/**
-	 * Delete given category 
-	 *
-	 * @param integer $id
-	 */
-	public function deleteData($id){
-		$this->load( ['BrandID=?', $id] );
-		// check is exists
-		$this->erase();
-	}
 	
-	/**
-	 * Return rows as [key] value
-	 *
-	 * @return array
-	 */
-	public function fetchKeyValue(){
-		$rows = $this->all();
-		$data = [];
-		foreach($rows as $r)
-			$data[$r['BrandID=?']] = $r['BrandName'];
-
-		return $data;
-	}
-
 }

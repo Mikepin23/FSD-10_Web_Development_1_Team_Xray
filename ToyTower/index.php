@@ -37,23 +37,16 @@ $f3->route('GET @ageRangeRead: /ages', 'AgeRangeController->listing');
 /**
  * Cart CRUD
  */
-$f3->route('GET @cartRead: /cart', 'PageController->cart');
+$f3->route('GET @cartRead: /cart', 'CartController->displayCart');
 
-// $f3->route('GET @cartCreate: /add', 'CartController->add');
-// $f3->route('POST @cartCreate: /add', 'CartController->addSave');
-
-$f3->route('GET @cartUpdate: /update/@cart', 'CartController->update');
-$f3->route('POST @cartUpdate: /update/@cart', 'CartController->updateSave');
-
-$f3->route('GET @cartDelete: /delete/@cart', 'CartController->delete');
-// we should implement a deletion validation and POST to actually delete
+$f3->route('POST @cartPost: /add-to-cart', 'CartController->addToCart');
+$f3->route('POST @checkoutPost: /checkout', 'CartController->checkout');
 
 /**
  * Login CRUD
  */
 $f3->route('GET @loginRead: /login', 'PageController->login');
 
-// $f3->route('GET @loginUpdate: /update/@login', 'LoginController->update');
 $f3->route('POST @loginUpdate: /update/@login', 'LoginController->loginSave');
 
 /**
@@ -61,8 +54,8 @@ $f3->route('POST @loginUpdate: /update/@login', 'LoginController->loginSave');
  */
 // $f3->route('GET @signUpRead: /create-account', 'SignUpController->signUp');
 
-$f3->route('GET @signUpCreate: /add', 'SignUpController->add');
-$f3->route('POST @signUpCreate: /add', 'SignUpController->addSave');
+$f3->route('GET @signUpCreate: /create-account', 'SignUpController->add');
+$f3->route('POST @signUpCreate: /create-account', 'SignUpController->addSave');
 
 /**
  * Toys CRUD
@@ -71,6 +64,11 @@ $f3->route('GET @toyRead: /toys', 'ToyController->listing');
 $f3->route('GET @toyReadCategories: /toys-category', 'ToyController->categoryListing');
 $f3->route('GET @toyReadBrands: /toys-brand', 'ToyController->brandListing');
 $f3->route('GET @toyReadAgeRanges: /toys-age-range', 'ToyController->ageRangeListing');
+
+/**
+ * Admin CRUD
+ */
+$f3->route('GET @adminRead: /admin', 'AdminController->login');
 
 // start the framework
 $f3->run();

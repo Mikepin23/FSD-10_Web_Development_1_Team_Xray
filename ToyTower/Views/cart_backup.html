@@ -1,18 +1,17 @@
 <include href="headers/cart_header.php"
-  ></include><!-- template header -->
+  ><!-- template header -->
 
   <section id="cart">
 
     <div class="container mt-5 p-3 rounded cart">
       <div class="row no-gutters">
-    
+        <repeat group="{{ @item }}" value="{{ @item }}">
         <div class="col-md-8">
           <div class="product-details mr-2">
             <hr />
             <h6 class="mb-0">Shopping cart</h6>
             <div class="d-flex justify-content-between">
               
-              <repeat group="{{ @item }}" value="{{ @item }}">
               <div class="d-flex flex-row align-items-center">
                
                 <div class="price ml-2">
@@ -21,10 +20,9 @@
               </div>
             </div>
               <!-- Card to Display Cart -->
-              
-              <div
+            <div
               class="d-flex justify-content-between align-items-center mt-3 p-2 items rounded"
-              >
+            >
               <div class="d-flex flex-row">
                 <img
                   class="rounded"
@@ -35,22 +33,37 @@
                   <span class="font-weight-bold d-block">{{ @item['ToyName'] }}</span>
                 </div>
               </div>
-            
               <div class="d-flex flex-row align-items-center">
-             
-              <p> Qty:{{ @item['quantity'] }} </p>
-
+                <button
+                  class="btn btn-link px-2"
+                  onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                >
+                  <i class="fas fa-minus"></i>
+                </button>
   
-                
+                <input
+                  id="form1"
+                  min="0"
+                  name="quantity"
+                  value="1"
+                  type="number"
+                  class="form-control form-control-sm"
+                  style="width: 60px;"
+                />
+  
+                <button
+                  class="btn btn-link px-2"
+                  onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                >
+                  <i class="fas fa-plus"></i>
+                </button>
                 <span class="d-block ml-5 font-weight-bold">${{ @item['Price'] }}</span
                 ><i class="fa fa-trash-o ml-3 text-black-50"></i>
               </div>
-            </repeat>
-            
             </div>
           </div>
         </div>
-      
+  
         <!-- card details -->
         <div class="col-md-4">
           <div class="payment-info">
@@ -129,30 +142,25 @@
             </div>
             <hr class="line" />
             <div class="d-flex justify-content-between information">
-              <span>Subtotal</span><span>${{ @subtotal }}</span>
+              <span>Subtotal</span><span>$3000.00</span>
             </div>
             <div class="d-flex justify-content-between information">
-              <span>Shipping</span><span>${{ @shipping_cost }}</span>
+              <span>Shipping</span><span>$20.00</span>
             </div>
             <div class="d-flex justify-content-between information">
-              <span>Total(Incl. taxes)</span><span>${{ @total_price }}</span>
+              <span>Total(Incl. taxes)</span><span>$3020.00</span>
             </div>
-            <form action="{{ @BASE }}{{ 'checkoutPost' | alias }}" method="POST">
-              <button
+            <button
               class="btn btn-dark btn-block d-flex justify-content-between mt-3"
-              type="submit"
+              type="button"
             >
-              <span>${{ @total_price }}</span><span> &#160;Checkout </span>
+              <span>$3020.00</span><span> &#160;Checkout </span>
             </button>
-          </form>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-    
-  </section>
-
-  <include href="footer.php"></include><!-- template footer -->
+  <include href="footer.php"><!-- template footer -->
 

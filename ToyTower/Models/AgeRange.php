@@ -44,7 +44,7 @@ class AgeRange extends Model{
 	 * @param integer $id
 	 */
 	public function deleteData($id){
-		$this->load( ['BrandID=?', $id] );
+		$this->load( ['AgeRangeID=?', $id] );
 		// check is exists
 		$this->erase();
 	}

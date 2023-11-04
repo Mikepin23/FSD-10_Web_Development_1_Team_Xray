@@ -6,6 +6,7 @@
 class CartController{
 
 	private $model; // db access
+	private $modelToy;
 	private $f3; // framework instance
 
 	/**
@@ -15,105 +16,90 @@ class CartController{
 
 		$this->f3 = $f3Var; // f3 instance
 		$this->model = new Cart();
+		$this->modelToy = new Toy();
 
 		$this->f3->set('pageTitle', "Cart | ToyTower"); // default page title
 
 	}
 
-	/**
-	 * Displays form to update given cateogory
-	 */
-	public function update(){
-		//get the id from the URL
-		$getParamId = $this->f3->get('PARAMS.cat');
-
-		// fetch data from db
-		$dbResult = $this->model->getById( $getParamId );
-		
-		// TODO: check that dbResults actully contains something else reroute
-
-		// set my category for the view
-		$this->f3->set("category", $dbResult);
-
-		//show the view
-		echo Template::instance()->render('categories/form.html');
+	public function addToCart($f3) {
+		$item = $f3->get('POST.toysID'); 
+		$cartModel = new Cart();
+		$cartModel->addToCart($item);
+		$f3->reroute($f3->get('SERVER.HTTP_REFERER'));
 	}
 
-	/**
-	 * Validate and updates the date of given cateogory
-	 */
-	public function updateSave(){
-		if ($this->validateForm()){ // data is good, save to db
-		
-			// save to the db
-			$this->model->updateData( $this->f3->get('PARAMS.cat'));
 
-			// reroute to listing
-			$this->f3->reroute('@catRead');
+public function displayCart($f3) {
 
-		}
+	if( !isset( $_SESSION['cart'] ) ) {
+		$_SESSION['cart'] = [];
+	} 
+	
+	// Declaring variable $itemIDs to equal the array keys in the cart which is in the session
+	// The array keys correspond to: ToysID in the cart
+	$itemIDs = array_keys($_SESSION['cart']);
 
+	// Database Connection
+	$db = new DB\SQL(
+		 'mysql:host=localhost;port=3304;dbname=fsd10_xray;charset=UTF8', 'fsduser', 'myDBpw');
+	// Fetch toys based on the specified categoryID from the database
+	// Example: SELECT * FROM toys where ToysID IN ('1','2','3')
+
+	// db_data is an array of dictionaries, where each dictionary is a row in the db
+	$query_str = "SELECT * FROM toys where ToysID IN ('" . implode("','", $itemIDs) . "')";
+	$db_data = $db->exec($query_str);
+
+
+	// for loop: Iterating through the rows of db_data which come from the db
+	$subtotal = 0;
+	for ($i = 0; $i < count($db_data); $i++) {
+		// variable $toy_id is given the value of the ToysID for that row
+		$toy_id = $db_data[$i]['ToysID'];
+		// $db_data at its index is set to the quantity fetched from the cart associated with the ToysId
+		$db_data[$i]['quantity'] = $_SESSION['cart'][$toy_id];
+		$subtotal += $db_data[$i]['quantity'] * $db_data[$i]['Price'];
 	}
+	number_format((float)$subtotal, 2, '.', '');
 
-	/**
-	 * Displays form to create a new
-	 */
-	public function add(){
+	$this->f3->set('subtotal', number_format((float)$subtotal, 2, '.', ''));
+	$this->f3->set('shipping_cost', number_format((float)20, 2, '.', ''));
+	$this->f3->set('total_price', number_format((float)($subtotal + 20) * 1.15, 2, '.', ''));
+	$this->f3->set('item', $db_data);
+	echo \Template::instance()->render('cart.html');
 
-		//set default values
-			//TODO undefined variables in template 
-		$this->f3->set('category', ['category_id'=>'', 'name'=>''] );
+}
 
-		//show the view
-		echo Template::instance()->render('categories/form.html');
+public function checkout($f3) {
 
+	// $this->displayCart($f3);
+
+	// Database Connection
+	$db = new DB\SQL(
+		'mysql:host=localhost;port=3304;dbname=fsd10_xray;charset=UTF8', 'fsduser', 'myDBpw');
+	
+	echo "<br>";
+	print_r($_SESSION['cart']);
+	echo "<br>";
+	echo "<br>";
+	echo "<br>";
+
+	for ($i = 0; $i < count($_SESSION['cart']); $i++) {
+		$toys_id = array_keys($_SESSION['cart'])[$i];
+		$query_str = "UPDATE toys set Stock = Stock - " . $_SESSION['cart'][$toys_id] . " where ToysID = '" . $toys_id . "'";
+		print_r($query_str);
+		echo "<br>";
+		$db->exec($query_str);
 	}
+	echo "<br>";
+	echo "<br>";
 
-	/**
-	 * Validate and created the date of a new cateogory
-	 */
-	public function addSave(){
-		if ($this->validateForm()){ // data is good, save to db
-			// save to db
-			$this->model->addData();
-			// reroute to the listing page
-			$this->f3->reroute('@catRead');
-		}
+	$_SESSION['cart'] = [];
+	// $db_data = $db->exec($query_str);
 
-	}
+	$f3->reroute($f3->get('SERVER.HTTP_REFERER'));
+	
+}
 
-	/**
-	 * Delete a given catagory
-	 */
-	public function delete(){
-		// TODO verification with user "Are you sure..."
 
-		// delete the record in the db
-		$this->model->deleteData( $this->f3->get('PARAMS.cat') );
-
-		// reroute the listing page
-		$this->f3->reroute('@catRead');
-	}
-
-	/**
-	 * Validate the data from the form after POST method
-	 *
-	 * @return boolean true if the form data is value
-	 */
-	private function validateForm(){
-		// TODO: validate better
-		if ($this->f3->get('POST.name') == ""){ //validate failed
-			// setup error for view
-			$this->f3->set('error', 'Name is required');
-
-			// populate my view
-			$this->f3->set('category', $this->f3->get('POST'));
-
-			// show my view
-			echo Template::instance()->render('categories/form.html');
-			// we can still process and do stuff after a view is rendered
-			return false;
-		} 
-		return true;
-	}
 }
