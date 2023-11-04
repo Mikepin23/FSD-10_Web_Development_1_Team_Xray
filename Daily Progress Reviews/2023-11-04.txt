@@ -1,0 +1,43 @@
+2023-11-04
+
+/* --------------------------------------------------------- */
+
+General Discussion:
+
+- Listed the remining tasks and ordered by importance.
+
+/* --------------------------------------------------------- */
+
+1) What we have done since the last meeting
+
+Michael: 
+
+- Finished the cart. 
+
+Zachary: 
+
+- Worked on the login buttons and sign out.
+
+/* --------------------------------------------------------- */
+
+2) What we plan to do today
+
+Michael: 
+
+- Administrative Panel, My account
+
+Zachary: 
+
+- About us, Descriptions and images
+
+/* --------------------------------------------------------- */
+
+3) Likely problems we may face 
+
+Michael: 
+
+- errors while connecting to the database.
+
+Zachary: 
+
+- Description and images are monotomous and energy draining.
