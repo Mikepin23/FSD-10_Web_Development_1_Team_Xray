@@ -60,11 +60,31 @@ CREATE TABLE email_subscriber (
 );
 
 /*
+CREATE TABLE CartItems 
+(
+    CartItemID int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    UserID int NOT NULL,
+    ToysID int NOT NULL,
+    Quantity int NOT NULL,
+    FOREIGN KEY (UserID) REFERENCES Users(UserID),
+    FOREIGN KEY (ToyID) REFERENCES Toys(ToyID)
+);
+
+CREATE TABLE Purchases 
+(
+	OrderID int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    UserID int NOT NULL,
+    Quantity int NOT NULL,
+    PurchaseDate DATETIME NOT NULL,
+    FOREIGN KEY (UserID) REFERENCES Users(UserID),
+)
+;
+*/
+
+/*
 CREATE TABLE Transactions 
 (
     OrderID INT,
-    UserID INT,
-    ProductID INT, -- not necessary
     Total DECIMAL(10, 2),
     PRIMARY KEY (OrderID),
     FOREIGN KEY (UserID) REFERENCES Users(UserID),
