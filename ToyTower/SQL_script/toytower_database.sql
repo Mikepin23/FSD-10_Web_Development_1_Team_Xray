@@ -43,17 +43,17 @@ CREATE TABLE Categories
 CREATE TABLE Toys 
 (
 	ToysID int PRIMARY KEY NOT NULL AUTO_INCREMENT,
-    ToyName varchar(50) NOT NULL,
+    ToyName varchar(255) NOT NULL,
     Price DECIMAL(10, 2) NOT NULL,
     Stock int NOT NUll,
     ToyImage varchar(150) NOT NULL, -- Path to Image
     BrandID int,
     AgeRangeID int,
     CategoryID int,
-    Descript varchar(255) NOT NULL
+    Descript varchar(255) NOT NULL,
     FOREIGN KEY (BrandID) REFERENCES Brands(BrandID),
     FOREIGN KEY (AgeRangeID) REFERENCES AgeRanges(AgeRangeID),
-    FOREIGN KEY (CategoryID) REFERENCES Categories(CategoryID),
+    FOREIGN KEY (CategoryID) REFERENCES Categories(CategoryID)
 )
 ;
 
@@ -64,11 +64,31 @@ CREATE TABLE email_subscriber (
 );
 
 /*
+CREATE TABLE CartItems 
+(
+    CartItemID int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    UserID int NOT NULL,
+    ToysID int NOT NULL,
+    Quantity int NOT NULL,
+    FOREIGN KEY (UserID) REFERENCES Users(UserID),
+    FOREIGN KEY (ToyID) REFERENCES Toys(ToyID)
+);
+
+CREATE TABLE Purchases 
+(
+	OrderID int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    UserID int NOT NULL,
+    Quantity int NOT NULL,
+    PurchaseDate DATETIME NOT NULL,
+    FOREIGN KEY (UserID) REFERENCES Users(UserID),
+)
+;
+*/
+
+/*
 CREATE TABLE Transactions 
 (
     OrderID INT,
-    UserID INT,
-    ProductID INT, -- not necessary
     Total DECIMAL(10, 2),
     PRIMARY KEY (OrderID),
     FOREIGN KEY (UserID) REFERENCES Users(UserID),
