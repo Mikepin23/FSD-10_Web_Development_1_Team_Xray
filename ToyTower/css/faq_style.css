@@ -1,0 +1,143 @@
+h1 {
+  text-align: center;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap");
+
+:root {
+  /* Colors */
+  --brand-color: rgb(72, 150, 253);
+  --black: hsl(0, 0%, 0%);
+  /* --white: hsl(0, 0%, 100%); */
+  /* Fonts */
+  --font-title: "Montserrat", sans-serif;
+  --font-text: "Lato", sans-serif;
+}
+
+h2 {
+  font-size: 2.25rem;
+  font-family: var(--font-title);
+  color: var(--white);
+  line-height: 1.1;
+}
+
+p {
+  font-family: var(--font-text);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--white);
+}
+
+.flow > * + * {
+  margin-top: var(--flow-space, 1em);
+}
+.faq_body{
+  display: block !important;
+}
+
+#image-container-faq {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  max-height: 300px !important;
+  width: auto !important;
+} 
+
+/*
+**
+    footer
+**
+*/
+
+#above-footer {
+  margin: 10px auto 10px auto;
+}
+
+/* Custom CSS for navigation hover effect */
+#above-footer a {
+  position: relative;
+  text-decoration: none;
+  color: black;
+  padding: 20px 20px 10px 20px;
+}
+
+#above-footer a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 10px;
+  background-color: rgb(140, 190, 255);
+  transition: 0.8s ease;
+}
+
+#above-footer a:hover::after {
+  width: 100%;
+}
+
+#footer p {
+  margin-top: 20px;
+}
+
+.QandApics {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  height: 500px !important;
+  width: auto !important;
+  margin-top: 200px !important;
+}
+
+.faq_body {
+  margin-top: 250px !important;
+}
+
+body{
+  background-color: #000;
+  font-family: "Montserrat", sans-serif !important;
+}
+
+.container h1{
+  color: #fff;
+  text-align: center;
+}
+
+details{
+  background-color: rgb(140, 190, 255);
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+summary {
+  padding: .5em 1.3rem;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;  
+  transition: height 1s ease;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary:after{
+  content: "\002B";
+}
+
+details[open] summary {
+    border-bottom: 1px solid #aaa;
+    margin-bottom: .5em;
+}
+
+details[open] summary:after{
+  content: "\00D7";
+}
+
+details[open] div{
+  padding: .5em 1em;
+}
+
+#signature{
+  float: right;
+}
