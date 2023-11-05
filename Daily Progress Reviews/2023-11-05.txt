@@ -1,0 +1,37 @@
+2023-11-05
+
+/* --------------------------------------------------------- */
+
+General Discussion:
+
+- Discussed what could be accomplished before the deadline. Listed what's to be done by a ranking.
+
+/* --------------------------------------------------------- */
+
+1) What we have done since the last meeting
+
+Michael: 
+
+- Worked on the Admin Panel. 
+
+Zachary: 
+
+- Standardized all images to be the same size. Added styling, routes and the new pages faq, about us and terms and conditions.
+
+/* --------------------------------------------------------- */
+
+2) What we plan to do today
+
+Michael: 
+
+- Properly comment out all code and trim unwanted code. Fix the css issue with the cart and add an empty cart option.
+
+Zachary: 
+
+- Properly comment out all code and trim unwanted code. Work on documentation. 
+
+/* --------------------------------------------------------- */
+
+3) Likely problems we may face 
+
+- Time Crunch.
