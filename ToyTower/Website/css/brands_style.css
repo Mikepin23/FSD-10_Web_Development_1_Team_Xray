@@ -59,6 +59,7 @@ p {
 /* CARD COMPONENT */
 
 .card {
+  max-block-size: 400px;
   display: grid;
   place-items: center;
   width: 80vw;
@@ -75,21 +76,23 @@ p {
 }
 
 .card__background {
-  object-fit: contain;
+  object-fit: cover;
   object-position: center bottom;
-  width: 100%;
-  height: 100%;
-  max-height: 200px;
+  /* width: 100%;
+  height: 100%; */
+  max-height: 300px;
 }
+
 
 .card__content {
   --flow-space: 0.9375rem;
-  display: flex;
+  display: center;
   flex-direction: column;
   justify-content: space-between;
   align-self: flex-end;
   height: 55%;
   padding: 12% 1.25rem 1.875rem;
+  transform: translateY(50%);
   background: linear-gradient(
     180deg,
     hsla(0, 0%, 0%, 0) 0%,
@@ -98,8 +101,14 @@ p {
   );
 }
 
+.card__content * {
+  margin: 0;
+  padding: 0;
+}
+
 .card__content--container {
   --flow-space: 1.25rem;
+  height: 150px;
 }
 
 .card__title {
@@ -137,9 +146,13 @@ p {
   outline-offset: -5px;
 }
 
+.card__description {
+  margin-top: 15px;
+}
+
 @media (any-hover: hover) and (any-pointer: fine) {
   .card__content {
-    transform: translateY(62%);
+    transform: translateY(200%);
     transition: transform 500ms ease-out;
     transition-delay: 500ms;
   }
@@ -170,7 +183,7 @@ p {
 
   .card:hover .card__content,
   .card:focus-within .card__content {
-    transform: translateY(0);
+    transform: translateY(-60%);
     transition: transform 500ms ease-in;
   }
 

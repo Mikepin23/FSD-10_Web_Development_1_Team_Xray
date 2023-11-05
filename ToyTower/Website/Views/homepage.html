@@ -23,6 +23,12 @@
         style="width: 100%"
       />
 
+      <img
+        class="mySlides"
+        src="img/Carrouselpics/TRU-hp-TopToys-d-102623-en.png"
+        style="width: 100%"
+      />
+
       <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">
         &#10094;
       </button>
@@ -40,54 +46,31 @@
     <br />
 
     <div class="button-container">
-      <button class="brand-button">
-        <img src="img/brands/barbie.png" alt="Image1" />
-      </button>
-      <button class="brand-button">
-        <img src="img/brands/disney.png" alt="Image2" />
-      </button>
-      <button class="brand-button">
-        <img src="img/brands/hasbro.png" alt="Image3" />
-      </button>
-      <button class="brand-button">
-        <img src="img/brands/marvel.png" alt="Image4" />
-      </button>
-      <button class="brand-button">
-        <img src="img/brands/pawpatrol.png" alt="Image5" />
-      </button>
-      <button class="brand-button">
-        <img src="img/brands/sonic.png" alt="Image5" />
-      </button>
+      <a class="brand-button" href="{{ @BASE }}{{ 'toyReadBrands' | alias }}?categoryID={{ '2' }}"><img src="img/brands/barbie.png" alt="Barbie"></a>
+      <a class="brand-button" href="{{ @BASE }}{{ 'toyReadBrands' | alias }}?categoryID={{ '5' }}"><img src="img/brands/disney.png" alt="Disney"></a>
+      <a class="brand-button" href="{{ @BASE }}{{ 'toyReadBrands' | alias }}?categoryID={{ '1' }}"><img src="img/brands/hasbro.png" alt="Hasbro"></a>
+      <a class="brand-button" href="{{ @BASE }}{{ 'toyReadBrands' | alias }}?categoryID={{ '3' }}"><img src="img/brands/marvel.png" alt="Marvel"></a>
+      <a class="brand-button" href="{{ @BASE }}{{ 'toyReadBrands' | alias }}?categoryID={{ '7' }}"><img src="img/brands/pawpatrol.png" alt="Paw Patrol"></a>
+      <a class="brand-button" href="{{ @BASE }}{{ 'toyReadBrands' | alias }}?categoryID={{ '10' }}"><img src="img/brands/sonic.png" alt="Sonic"></a>
     </div>
 
-    <br />
+    <br/>
 
-    <div class="banner">
-      <h2>Shop By Age</h2>
-    </div>
+  <div class="banner">
+    <h2>Shop By Age</h2>
+  </div>
 
-    <br />
+    <br/>
 
     <div class="button-container">
-      <button class="age-button">
-        <img src="img/ages/0-2.png" alt="Image1" />
-      </button>
-      <button class="age-button">
-        <img src="img/ages/3-4.png" alt="Image2" />
-      </button>
-      <button class="age-button">
-        <img src="img/ages/5-7.png" alt="Image3" />
-      </button>
-      <button class="age-button">
-        <img src="img/ages/8-10.png" alt="Image4" />
-      </button>
-      <button class="age-button">
-        <img src="img/ages/11-12.png" alt="Image5" />
-      </button>
-      <button class="age-button">
-        <img src="img/ages/13+.png" alt="Image5" />
-      </button>
+      <a class="age-button" href="{{ @BASE }}{{ 'toyReadCategories' | alias }}?categoryID={{ '1' }}"><img src="img/ages/0-2.png" alt="Children ages 0-2"></a>
+      <a class="age-button" href="{{ @BASE }}{{ 'toyReadCategories' | alias }}?categoryID={{ '2' }}"><img src="img/ages/3-4.png" alt="Children ages 3-4"></a>
+      <a class="age-button" href="{{ @BASE }}{{ 'toyReadCategories' | alias }}?categoryID={{ '3' }}"><img src="img/ages/5-7.png" alt="Children ages 5-7"></a>
+      <a class="age-button" href="{{ @BASE }}{{ 'toyReadCategories' | alias }}?categoryID={{ '4' }}"><img src="img/ages/8-10.png" alt="Children ages 3-4"></a>
+      <a class="age-button" href="{{ @BASE }}{{ 'toyReadCategories' | alias }}?categoryID={{ '5' }}"><img src="img/ages/11-12.png" alt="Children ages 3-4"></a>
+      <a class="age-button" href="{{ @BASE }}{{ 'toyReadCategories' | alias }}?categoryID={{ '6' }}"><img src="img/ages/13+.png" alt="Children ages 3-4"></a>
     </div>
+<<<<<<< Updated upstream:ToyTower/Website/Views/homepage.html
   </section>
 
   <br />
@@ -102,3 +85,8 @@
     </section> -->
 
     <include href="footer.html"><!-- template footer -->
+=======
+</section>
+<br/>
+<include href="footer.php"><!-- template footer -->
+>>>>>>> Stashed changes:ToyTower/Views/homepage.html

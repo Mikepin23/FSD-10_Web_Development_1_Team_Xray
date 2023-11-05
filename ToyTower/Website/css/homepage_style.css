@@ -27,6 +27,12 @@
   flex-wrap: wrap;
 }
 
+.age-button {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
 .brand-button, .age-button {
   background-color: white;
   border: none;

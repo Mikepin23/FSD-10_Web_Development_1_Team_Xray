@@ -1,0 +1,110 @@
+h1 {
+  text-align: center;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap");
+
+:root {
+  /* Colors */
+  --brand-color: rgb(72, 150, 253);
+  --black: hsl(0, 0%, 0%);
+  /* --white: hsl(0, 0%, 100%); */
+  /* Fonts */
+  --font-title: "Montserrat", sans-serif;
+  --font-text: "Lato", sans-serif;
+}
+
+h2 {
+  font-size: 2.25rem;
+  font-family: var(--font-title);
+  color: var(--white);
+  line-height: 1.1;
+}
+
+p {
+  font-family: var(--font-text);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--white);
+}
+
+.flow > * + * {
+  margin-top: var(--flow-space, 1em);
+}
+
+.about_us_body  {
+  color: black !important;
+  font-weight: bold !important;
+  display: block !important;
+}
+
+.TTorigins, .founder, .thanksthomas, .imagefounder, .modernimage {
+  width: 60% !important;
+  height: auto !important;
+}
+
+.about_us_header {
+  text-align: center !important;
+  font-weight: bold !important;
+  margin-bottom: 20px !important;
+}
+
+#image-container-origins, #image-container-founder, #image-container-us, #image-container-with-kids, #image-container-us {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  height: 600px !important;
+  background-color: rgb(140, 190, 255) !important;
+}
+
+#image-container-origins {
+  padding-top: -90px !important;
+  margin-bottom: 50px !important;
+}
+
+#image-container-origins img, #image-container-founder img, #image-container-us img, #image-container-with-kids img, #image-container-us img {
+  max-height: 80% !important;
+  width: auto !important;
+}
+
+#image-container-us {
+  margin-bottom: 30px !important;
+}
+
+
+/*
+**
+    footer
+**
+*/
+
+#above-footer {
+  margin: 10px auto 10px auto;
+}
+
+/* Custom CSS for navigation hover effect */
+#above-footer a {
+  position: relative;
+  text-decoration: none;
+  color: black;
+  padding: 20px 20px 10px 20px;
+}
+
+#above-footer a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 10px;
+  background-color: rgb(140, 190, 255);
+  transition: 0.8s ease;
+}
+
+#above-footer a:hover::after {
+  width: 100%;
+}
+
+#footer p {
+  margin-top: 20px;
+}
