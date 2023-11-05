@@ -53,7 +53,7 @@
         </div>
         <div class="inputbox">
           <input
-            type="text"
+            type="email"
             name="UserEmail"
             class="form-control"
             placeholder="Email"

@@ -24,7 +24,6 @@ class SignUpController{
 	 * Displays form to create a new
 	 */
 	public function add($f3){
-		$f3->set("pageTitle", "Create Account | ToyTower");
 
 		//set default values
 			//TODO undefined variables in template 

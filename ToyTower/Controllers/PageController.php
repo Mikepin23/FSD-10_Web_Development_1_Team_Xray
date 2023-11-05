@@ -20,6 +20,71 @@ class PageController {
 
 	}
 
+	function AboutUs ($f3){
+
+	// create template instance to show visual to users
+	$f3->set("pageTitle", "AboutUs | ToyTower");
+
+	echo Template::instance()->render('aboutus.html');
+
+
+	}
+
+	function TermsAndConditions ($f3){
+
+		// create template instance to show visual to users
+		$f3->set("pageTitle", "TermsAndConditions | ToyTower");
+	
+		echo Template::instance()->render('termsandconditions.html');
+	
+	
+		}
+
+		function FAQ ($f3){
+
+			// create template instance to show visual to users
+			$f3->set("pageTitle", "FAQ | ToyTower");
+		
+			echo Template::instance()->render('faq.html');
+		
+		
+		}
+
+		function account ($f3){
+
+			// create template instance to show visual to users
+			$f3->set("pageTitle", "myaccount | ToyTower");
+		
+			echo Template::instance()->render('account.html');
+		
+		
+		}
+
+		/*
+		public function searchbar($f3){
+
+			// fetch the categories from the db
+			$categories = $this->model->all();
+	
+			// Fetch toys based on the search query in brandname
+      $toys = $conn->query("SELECT * FROM toys WHERE brandname LIKE '%$searchQuery%'");
+
+			if ($toys === false) {
+  			die("Error executing query: " . $conn->error);
+			}
+
+      // Pass the filtered toys to the view
+      $f3->set('toys', $toys);
+
+			// set my category for the view
+			$this->f3->set('categories', $categories);
+			
+			// show the view
+			echo Template::instance()->render('categories/listing.html');
+			
+		}
+		*/
+
 	function categories($f3){
 
 		// create template instance to show visual to users

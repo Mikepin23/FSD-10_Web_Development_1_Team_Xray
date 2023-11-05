@@ -43,11 +43,11 @@ $conn->close();
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <a href="#" class="text-black mx-3">My Account</a>
-          <a href="#" class="text-black mx-3">FAQ</a>
+          <a href="{{ @BASE }}{{ 'myaccount' | alias }}" class="text-black mx-3">My Account</a>
+          <a href="{{ @BASE }}{{ 'faq' | alias }}" class="text-black mx-3">FAQ</a>
           <a href="#" class="text-black mx-3">Gift Services</a>
-          <a href="#" class="text-black mx-3">About Us</a>
-          <a href="#" class="text-black mx-3">Terms and Conditions</a>
+          <a href="{{ @BASE }}{{ 'aboutus' | alias }}" class="text-black mx-3">About Us</a>
+          <a href="{{ @BASE }}{{ 'termsandconditions' | alias }}" class="text-black mx-3">Terms and Conditions</a>
         </div>
       </div>
     </div>

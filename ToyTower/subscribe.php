@@ -9,7 +9,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Execute the statement
         if ($stmt->execute()) {
-            echo "You have been subscribed!";
+            // Subscription successful, redirect to the "/ToyTower/" page
+            header("Location: /ToyTower/");
+            exit();
         } else {
             echo "There was an error. Please try again.";
         }
@@ -19,4 +21,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 $conn->close();
+
+
 ?>

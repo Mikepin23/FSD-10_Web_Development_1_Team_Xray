@@ -1,4 +1,4 @@
-<?php echo $this->render('headers/brands_header.php',NULL,get_defined_vars(),0); ?>
+<?php echo $this->render('headers/ages_header.php',NULL,get_defined_vars(),0); ?>
     <div class="container mt-5">
       <div class="row">
         <?php foreach (($ageranges?:[]) as $a): ?>
@@ -13,8 +13,8 @@
                 <div class="card__content--container | flow">
                   <h2 class="card__title"><?= ($a['Range']) ?></h2>
                   <p class="card__description">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Rerum in labore laudantium deserunt fugiat numquam.
+                    <?= ($a['Descript'])."
+" ?>
                   </p>
                 </div>
                 <a
@@ -30,5 +30,4 @@
     </div>
   </section>
 
-  <?php echo $this->render('footer.php',NULL,get_defined_vars(),0); ?></include
->
+  <?php echo $this->render('footer.php',NULL,get_defined_vars(),0); ?>

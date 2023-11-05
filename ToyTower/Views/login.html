@@ -5,7 +5,7 @@
       <div class="text-center">
         <h3>Login</h3>
         <span class="abt"
-          >Don't have an account? <a href="#">Create an Account</a></span
+          >Don't have an account? <a href="{{ @BASE }}{{ 'signUpCreate' | alias }}">Create an Account</a></span
         >
       </div>
       <form method="POST" action="loginhandler.php">
@@ -35,4 +35,4 @@
     </div>
   </section>
 
-    <include href="footer.php"><!-- template footer -->
+    <include href="footer.php"></include><!-- template footer -->

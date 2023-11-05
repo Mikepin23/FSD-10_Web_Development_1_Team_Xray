@@ -1,5 +1,6 @@
 <?php
 require 'DBconnect.php';
+require 'session.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['username']) && isset($_POST['password'])) {
     // Prepare statement
@@ -13,10 +14,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['username']) && isset($
     $result = $stmt->get_result();
 
     if ($result->num_rows > 0) {
-        // Successful login: Set the session
-        session_start();
-        $_SESSION['user'] = $_POST['username'];
-        header('Location: /ToyTower/'); // TODO: Need to change to just "/" when uploading it to the remote server
+        $row = $result->fetch_assoc();
+
+        // Set session variables
+        $_SESSION['user'] = $row['Username'];
+        $_SESSION['user_id'] = $row['UserID'];
+        $_SESSION['first_name'] = $row['UserFN'];
+        $_SESSION['last_name'] = $row['UserLN'];
+        $_SESSION['email'] = $row['UserEmail'];
+        $_SESSION['phone'] = $row['Phone'];
+        $_SESSION['postal_code'] = $row['PostalCode'];
+
+
+        
+        header('Location: hp.php'); // TODO: Need to change to just "/" when uploading it to the remote server
         exit;
     } else {
         $_SESSION['error'] = 'Invalid username / password combo. Please try again.';

@@ -17,7 +17,8 @@ CREATE TABLE Brands
 (
     BrandID int PRIMARY KEY NOT NULL AUTO_INCREMENT,
     BrandName varchar(50) NOT NULL,
-    BrandImage varchar(150) NOT NULL -- Path to Image
+    BrandImage varchar(150) NOT NULL, -- Path to Image
+    Descript varchar(255) NOT NULL
 )
 ;
 
@@ -25,7 +26,8 @@ CREATE TABLE AgeRanges
 (
     AgeRangeID int PRIMARY KEY NOT NULL AUTO_INCREMENT,
     `Range` varchar(50) NOT NULL,
-    AgeRangeImage varchar(150) NOT NULL -- Path to Image
+    AgeRangeImage varchar(150) NOT NULL, -- Path to Image
+    Descript varchar(255) NOT NULL
 )
 ;
 
@@ -33,20 +35,22 @@ CREATE TABLE Categories
 (
     CategoryID int PRIMARY KEY NOT NULL AUTO_INCREMENT,
     CategoryName varchar(50) NOT NULL,
-    CategoryImage varchar(150) NOT NULL -- Path to Image
+    CategoryImage varchar(150) NOT NULL, -- Path to Image
+    Descript varchar(255) NOT NULL
 )
 ;
 
 CREATE TABLE Toys 
 (
 	ToysID int PRIMARY KEY NOT NULL AUTO_INCREMENT,
-    ToyName varchar(50) NOT NULL,
+    ToyName varchar(255) NOT NULL,
     Price DECIMAL(10, 2) NOT NULL,
     Stock int NOT NUll,
     ToyImage varchar(150) NOT NULL, -- Path to Image
     BrandID int,
     AgeRangeID int,
     CategoryID int,
+    Descript varchar(255) NOT NULL,
     FOREIGN KEY (BrandID) REFERENCES Brands(BrandID),
     FOREIGN KEY (AgeRangeID) REFERENCES AgeRanges(AgeRangeID),
     FOREIGN KEY (CategoryID) REFERENCES Categories(CategoryID)

@@ -17,6 +17,11 @@ $f3->set('UI', 'Views/');
 
 // routes using /Controller classes
 $f3->route('GET @home: /', 'PageController->homepage');
+$f3->route('GET @aboutus: /aboutus', 'PageController->AboutUs');
+$f3->route('GET @termsandconditions: /TermsAndConditions', 'PageController->TermsAndConditions');
+$f3->route('GET @faq: /FAQ', 'PageController->FAQ');
+$f3->route('GET @createaccount: /login', 'PageController->login');
+$f3->route('GET @myaccount: /myaccount', 'PageController->account');
 
 
 /**
@@ -68,7 +73,12 @@ $f3->route('GET @toyReadAgeRanges: /toys-age-range', 'ToyController->ageRangeLis
 /**
  * Admin CRUD
  */
-$f3->route('GET @adminRead: /admin', 'AdminController->login');
+$f3->route('GET @adminRead: /admin', 'AdminController->addToys');
+$f3->route('POST @adminCreate: /admin', 'AdminController->addSave');
+
+$f3->route('GET @adminModify: /admin-modify', 'AdminController->updateUser');
+$f3->route('POST @adminModify: /admin-modify', 'AdminController->updateSave');
+
 
 // start the framework
 $f3->run();

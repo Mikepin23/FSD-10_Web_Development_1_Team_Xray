@@ -1,0 +1,60 @@
+h2 {
+  font-size: 2.25rem;
+  font-family: var(--font-title);
+  color: var(--white);
+  line-height: 1.1;
+}
+
+p {
+  font-family: var(--font-text);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--white);
+}
+
+.flow > * + * {
+  margin-top: var(--flow-space, 1em);
+}
+
+.about_us_body  {
+  color: black !important;
+  font-weight: bold !important;
+  display: block !important;
+}
+
+/*
+**
+    footer
+**
+*/
+
+#above-footer {
+  margin: 10px auto 10px auto;
+}
+
+/* Custom CSS for navigation hover effect */
+#above-footer a {
+  position: relative;
+  text-decoration: none;
+  color: black;
+  padding: 20px 20px 10px 20px;
+}
+
+#above-footer a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 10px;
+  background-color: rgb(140, 190, 255);
+  transition: 0.8s ease;
+}
+
+#above-footer a:hover::after {
+  width: 100%;
+}
+
+#footer p {
+  margin-top: 20px;
+}

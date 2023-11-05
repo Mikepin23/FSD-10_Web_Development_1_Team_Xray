@@ -1,9 +1,9 @@
-<include href="headers/brands_header.php"
+<include href="headers/ages_header.php"
   ><!-- template header -->
 
   <h1>Brands</h1>
 
-  <section id="toy-brands">
+  <section id="toy-ages">
     <div class="container mt-5">
       <div class="row">
         <repeat group="{{ @ageranges }}" value="{{ @a }}">
@@ -18,8 +18,7 @@
                 <div class="card__content--container | flow">
                   <h2 class="card__title">{{ @a['Range'] }}</h2>
                   <p class="card__description">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Rerum in labore laudantium deserunt fugiat numquam.
+                    {{ @a['Descript'] }}
                   </p>
                 </div>
                 <a
@@ -35,5 +34,4 @@
     </div>
   </section>
 
-  <include href="footer.php"><!-- template footer --></include></include
->
+  <include href="footer.php"><!-- template footer --></include>
