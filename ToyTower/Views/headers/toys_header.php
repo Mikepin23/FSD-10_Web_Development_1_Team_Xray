@@ -96,7 +96,7 @@
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="{{ @BASE }}{{ 'catRead' | alias }}"
+                <a class="nav-link" href="{{ @BASE }}{{ 'cartRead' | alias }}"
                   ><i class="fas fa-shopping-cart icon"></i
                 ></a>
               </li>

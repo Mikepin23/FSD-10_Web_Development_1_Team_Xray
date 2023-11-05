@@ -94,7 +94,7 @@
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="<?= ($BASE) ?><?= (Base::instance()->alias('catRead')) ?>"
+                <a class="nav-link" href="<?= ($BASE) ?><?= (Base::instance()->alias('cartRead')) ?>"
                   ><i class="fas fa-shopping-cart icon"></i
                 ></a>
               </li>
