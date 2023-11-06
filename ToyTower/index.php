@@ -47,6 +47,8 @@ $f3->route('GET @cartRead: /cart', 'CartController->displayCart');
 $f3->route('POST @cartPost: /add-to-cart', 'CartController->addToCart');
 $f3->route('POST @checkoutPost: /checkout', 'CartController->checkout');
 
+$f3->route('GET @cartEmptyCart: /cart-empty', 'CartController->emptyCart');
+
 /**
  * Login CRUD
  */

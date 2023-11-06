@@ -1,8 +1,6 @@
-h1 {
-  text-align: center;
-}
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Pacifico&family=Playpen+Sans:wght@400;600&display=swap");
 
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap");
 
 :root {
   /* Colors */
@@ -10,16 +8,20 @@ h1 {
   --black: hsl(0, 0%, 0%);
   --white: hsl(0, 0%, 100%);
   /* Fonts */
-  --font-title: "Montserrat", sans-serif;
-  --font-text: "Lato", sans-serif;
+  --font-title: "Josefin Sans", sans-serif;
+  --font-text: "Playpen Sans", cursive;
+}
+
+h1 {
+  text-align: center;
 }
 
 /* RESET */
 
 /* Box sizing rules */
-#toy-brands,
-#toy-brands::before,
-#toy-brands::after {
+#toy-categories,
+#toy-categories::before,
+#toy-categories::after {
   box-sizing: border-box;
 }
 
@@ -31,7 +33,7 @@ p {
 } */
 
 /* GLOBAL STYLES */
-#toy-brands {
+#toy-categories {
   display: flex;
   justify-content: space-between;
   /* height: 100vh; */
@@ -59,7 +61,7 @@ p {
 /* CARD COMPONENT */
 
 .card {
-  max-block-size: 400px;
+  max-block-size: 350px;
   display: grid;
   place-items: center;
   width: 80vw;
@@ -77,12 +79,9 @@ p {
 
 .card__background {
   object-fit: cover;
-  object-position: center bottom;
-  /* width: 100%;
-  height: 100%; */
-  max-height: 300px;
-}
+  max-height: 350px;
 
+}
 
 .card__content {
   --flow-space: 0.9375rem;
@@ -114,7 +113,8 @@ p {
 .card__title {
   position: relative;
   width: fit-content;
-  width: -moz-fit-content;
+  width: -moz-fit-content; 
+  color: white;
 }
 
 .card__title::after {
@@ -130,7 +130,7 @@ p {
 .card__button {
   padding: 0.75em 1.6em;
   width: fit-content;
-  width: -moz-fit-content;
+  width: -moz-fit-content; 
   font-variant: small-caps;
   font-weight: bold;
   border-radius: 0.45em;
@@ -183,7 +183,7 @@ p {
 
   .card:hover .card__content,
   .card:focus-within .card__content {
-    transform: translateY(-60%);
+    transform: translateY(-100%);
     transition: transform 500ms ease-in;
   }
 
@@ -215,6 +215,6 @@ p {
   }
 }
 
-a {
+a.card__button {
   text-decoration: none;
 }

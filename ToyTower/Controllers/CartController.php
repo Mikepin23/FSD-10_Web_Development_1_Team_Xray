@@ -101,5 +101,14 @@ public function checkout($f3) {
 	
 }
 
+public function emptyCart($f3) {
+	if( isset( $_SESSION['cart'] ) ) {
+		$_SESSION['cart'] = [];
+		$f3->reroute($f3->get('SERVER.HTTP_REFERER'));
+	} 
+}
+
+
+
 
 }

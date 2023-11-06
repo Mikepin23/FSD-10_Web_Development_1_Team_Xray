@@ -6,19 +6,23 @@
         <div class="col-md-8">
           <div class="product-details mr-2">
             <hr />
-            <h6 class="mb-0">Shopping cart</h6>
-            <div class="d-flex justify-content-between">
-              
-              <?php foreach (($item?:[]) as $item): ?>
-              <div class="d-flex flex-row align-items-center">
-               
-                <div class="price ml-2">
-                  
-                </div>
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h6 class="mb-0">Shopping cart</h6>
+              <div class="d-flex align-items-center">
+                  <h6 class="mb-0 mr-3">Empty Cart</h6>
+                  <a class="nav-link" href="<?= ($BASE) ?><?= (Base::instance()->alias('cartEmptyCart')) ?>">
+                      <i class="fa fa-trash icon" style="margin-left: 5px;"></i>
+                  </a>
               </div>
+          </div>
+          
+          
+          
+            
+            <div class="d-flex justify-content-between">
+              <?php foreach (($item?:[]) as $item): ?>
             </div>
               <!-- Card to Display Cart -->
-              
               <div
               class="d-flex justify-content-between align-items-center mt-3 p-2 items rounded"
               >
@@ -32,22 +36,16 @@
                   <span class="font-weight-bold d-block"><?= ($item['ToyName']) ?></span>
                 </div>
               </div>
-            
               <div class="d-flex flex-row align-items-center">
-             
-              <p> Qty:<?= ($item['quantity']) ?> </p>
-
-  
-                
-                <span class="d-block ml-5 font-weight-bold">$<?= ($item['Price']) ?></span
-                ><i class="fa fa-trash-o ml-3 text-black-50"></i>
+                <span>Qty:<?= ($item['quantity']) ?></span>
+                <span class="d-block ml-3 font-weight-bold">$<?= ($item['Price']) ?></span>
+                <i class="fa fa-trash-o ml-3 text-black-50"></i>
               </div>
             <?php endforeach; ?>
-            
             </div>
           </div>
         </div>
-      
+
         <!-- card details -->
         <div class="col-md-4">
           <div class="payment-info">

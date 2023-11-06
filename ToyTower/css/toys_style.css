@@ -3,6 +3,11 @@
   * https://bestjquery.com/tutorial/product-grid/demo149/
 **/
 
+form button.add-to-cart {
+  border: none;
+  outline: none;
+}
+
 .product-grid {
   font-family: "Poppins", sans-serif;
   text-align: center;
@@ -265,3 +270,4 @@
     margin: 0 0 30px;
   }
 }
+

@@ -1,8 +1,6 @@
-h1 {
-  text-align: center;
-}
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Pacifico&family=Playpen+Sans:wght@400;600&display=swap");
 
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap");
 
 :root {
   /* Colors */
@@ -10,8 +8,12 @@ h1 {
   --black: hsl(0, 0%, 0%);
   --white: hsl(0, 0%, 100%);
   /* Fonts */
-  --font-title: "Montserrat", sans-serif;
-  --font-text: "Lato", sans-serif;
+  --font-title: "Josefin Sans", sans-serif;
+  --font-text: "Playpen Sans", cursive;
+}
+
+h1 {
+  text-align: center;
 }
 
 /* RESET */
@@ -112,6 +114,7 @@ p {
   position: relative;
   width: fit-content;
   width: -moz-fit-content; 
+  color: white;
 }
 
 .card__title::after {
@@ -212,6 +215,6 @@ p {
   }
 }
 
-a {
+a.card__button {
   text-decoration: none;
 }
