@@ -3,7 +3,7 @@
 class AgeRange extends Model{
 
 	public function __construct(){
-		// setup db model to use the categories table
+		// setup db model to use the AgeRange table
 		parent::__construct('ageranges');
 	}
 
@@ -18,7 +18,7 @@ class AgeRange extends Model{
 	}
 
 	/**
-	 * Update the database from given category from POST data
+	 * Update the database from given age range from POST data
 	 *
 	 * @param integer $id
 	 */
@@ -39,7 +39,7 @@ class AgeRange extends Model{
 	}
 
 	/**
-	 * Delete given category 
+	 * Delete given age range
 	 *
 	 * @param integer $id
 	 */

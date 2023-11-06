@@ -3,7 +3,7 @@
 class Brand extends Model{
 
 	public function __construct(){
-		// setup db model to use the categories table
+		// setup db model to use the Brands table
 		parent::__construct('brands');
 	}
 
@@ -18,7 +18,7 @@ class Brand extends Model{
 	}
 
 	/**
-	 * Update the database from given category from POST data
+	 * Update the database from given brand from POST data
 	 *
 	 * @param integer $id
 	 */
@@ -39,7 +39,7 @@ class Brand extends Model{
 	}
 
 	/**
-	 * Delete given category 
+	 * Delete given brand 
 	 *
 	 * @param integer $id
 	 */

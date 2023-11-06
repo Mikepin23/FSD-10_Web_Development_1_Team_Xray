@@ -18,7 +18,7 @@ class Admin extends Model{
 	}
 
 	/**
-	 * Update the database from given category from POST data
+	 * Update the database from given toy from POST data
 	 *
 	 * @param integer $id
 	 */
@@ -43,7 +43,7 @@ class Admin extends Model{
 }
 
 	/**
-	 * Delete given category 
+	 * Delete given toy 
 	 *
 	 * @param integer $id
 	 */

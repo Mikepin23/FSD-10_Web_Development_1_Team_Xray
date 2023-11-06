@@ -9,7 +9,7 @@ class CategoryController{
 	private $f3; // framework instance
 
 	/**
-	 * @param object $f3Var Intance of fat free framwwork
+	 * @param object $f3Var Instance of Fat-Free Framework
 	 */
 	public function __construct($f3Var){
 
@@ -28,7 +28,7 @@ class CategoryController{
 		// fetch the categories from the db
 		$categories = $this->model->all();
 
-		// set my category for the view
+		// set the categories for the view
 		$this->f3->set('categories', $categories);
 		
 		// show the view

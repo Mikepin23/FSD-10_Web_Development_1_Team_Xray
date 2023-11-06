@@ -1,7 +1,7 @@
 <?php 
 
 /**
- * Logic for categories
+ * Logic for ages
  */
 class AgeRangeController {
 
@@ -9,7 +9,7 @@ class AgeRangeController {
 	private $f3; // framework instance
 
 	/**
-	 * @param object $f3Var Instance of fat free framework
+	 * @param object $f3Var Instance of Fat-Free Framework
 	 */
 	public function __construct($f3Var){
 
@@ -17,18 +17,19 @@ class AgeRangeController {
 		$this->model = new AgeRange();
 
 		$this->f3->set('pageTitle', "Ages | ToyTower"); // default page title
+		$this->f3->set('error', ""); //default error message
 
 	}
 
 	/**
-	 * Displays a listing of all the brands
+	 * Displays a listing of all the ages
 	 */
 	public function listing(){
 
-		// fetch the categories from the db
+		// fetch the ages from the db
 		$ageRanges = $this->model->all();
 
-		// set my category for the view
+		// set the ages for the view
 		$this->f3->set('ageranges', $ageRanges);
 		
 		// show the view

@@ -3,7 +3,7 @@
 class SignUp extends Model{
 
 	public function __construct(){
-		// setup db model to use the categories table
+		// setup db model to use the users table
 		parent::__construct('users');
 	}
 
@@ -18,7 +18,7 @@ class SignUp extends Model{
 	}
 
 	/**
-	 * Update the database from given category from POST data
+	 * Update the database from given user from POST data
 	 *
 	 * @param integer $id
 	 */
@@ -39,7 +39,7 @@ class SignUp extends Model{
 	}
 
 	/**
-	 * Delete given category 
+	 * Delete given user 
 	 *
 	 * @param integer $id
 	 */

@@ -9,7 +9,7 @@ class LoginController{
 	private $f3; // framework instance
 
 	/**
-	 * @param object $f3Var Intance of fat free framwwork
+	 * @param object $f3Var Instance of Fat-Free Framework
 	 */
 	public function __construct($f3Var){
 

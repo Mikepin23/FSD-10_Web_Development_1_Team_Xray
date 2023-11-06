@@ -63,6 +63,8 @@ CREATE TABLE email_subscriber (
     PRIMARY KEY (ID)
 );
 
+/* Was never able to implement a purchases or transactions tables*/
+
 /*
 CREATE TABLE CartItems 
 (

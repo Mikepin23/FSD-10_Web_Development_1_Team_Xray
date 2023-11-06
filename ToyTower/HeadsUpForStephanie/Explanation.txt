@@ -1,0 +1,10 @@
+- We created multiple headers because we had multiple stylesheets and they would conflict with each other otherwise.
+
+- We have more controllers and templates then we need because it made it more simple for us to find things.
+
+
+- Things we ran out of time to complete:
+  - Admin Panel fully functional
+  - Search Bar
+  - My account
+  - Validation for create account/login

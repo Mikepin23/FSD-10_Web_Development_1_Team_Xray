@@ -1,7 +1,7 @@
 <?php 
 
 /**
- * Logic for categories
+ * Logic for Create Account
  */
 class SignUpController{
 
@@ -9,7 +9,7 @@ class SignUpController{
 	private $f3; // framework instance
 
 	/**
-	 * @param object $f3Var Intance of fat free framwwork
+	 * @param object $f3Var Instance of Fat-Free Framework
 	 */
 	public function __construct($f3Var){
 
@@ -26,7 +26,6 @@ class SignUpController{
 	public function add($f3){
 
 		//set default values
-			//TODO undefined variables in template 
 		$this->f3->set('createAccount', ['UserID'=>'', 'Username'=>'', 'UserPass'=>'', 'UserFN'=>'', 'UserLN'=>'', 'UserEmail'=>'', 'Phone'=>'', 'PostalCode'=>''] );
 
 		//show the view
@@ -35,13 +34,13 @@ class SignUpController{
 	}
 
 	/**
-	 * Validate and created the date of a new cateogory
+	 * Validate and created the date of a new user
 	 */
 	public function addSave(){
 		if ($this->validateForm()){ // data is good, save to db
 			// save to db
 			$this->model->addData();
-			// reroute to the listing page
+			// re-route to the home page
 			$this->f3->reroute('@home');
 	}
 

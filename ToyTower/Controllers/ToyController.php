@@ -1,7 +1,7 @@
 <?php 
 
 /**
- * Logic for categories
+ * Logic for toys
  */
 class ToyController {
 
@@ -9,7 +9,7 @@ class ToyController {
 	private $f3; // framework instance
 
 	/**
-	 * @param object $f3Var Instance of fat free framework
+	 * @param object $f3Var Instance of Fat-Free Framework
 	 */
 	public function __construct($f3Var){
 
@@ -41,8 +41,7 @@ class ToyController {
     $categoryID = $f3->get('GET.categoryID');
 
     // Database Connection
-    $db = new DB\SQL(
-      'mysql:host=localhost;port=3304;dbname=fsd10_xray;charset=UTF8', 'fsduser', 'myDBpw');
+    $db = new DB\SQL('mysql:host=localhost;port=3304;dbname=fsd10_xray;charset=UTF8', 'fsduser', 'myDBpw');
 
     // Fetch toys based on the specified categoryID from the database
     $toys = $db->exec('SELECT * FROM toys WHERE CategoryID = ?', $categoryID);
@@ -50,7 +49,7 @@ class ToyController {
     // Pass the filtered toys to the view
     $f3->set('toys', $toys);
 
-    // Render the view (assuming 'toyRead.html' is your template file)
+    // Render the view 
     echo \Template::instance()->render('toys.html');
 }
 
@@ -59,8 +58,7 @@ public function brandListing($f3) {
   $brandID = $f3->get('GET.brandID');
   
     // Database Connection
-  $db = new DB\SQL(
-    'mysql:host=localhost;port=3304;dbname=fsd10_xray;charset=UTF8', 'fsduser', 'myDBpw');
+  $db = new DB\SQL('mysql:host=localhost;port=3304;dbname=fsd10_xray;charset=UTF8', 'fsduser', 'myDBpw');
 
   // Fetch toys based on the specified BrandID from the database
   $toys = $db->exec('SELECT * FROM toys WHERE BrandID = ?', $brandID);
@@ -68,7 +66,7 @@ public function brandListing($f3) {
   // Pass the filtered toys to the view
   $f3->set('toys', $toys);
 
-  // Render the view (assuming 'toys.html' is your template file)
+  // Render the view 
   echo \Template::instance()->render('toys.html');
 }
 
@@ -77,8 +75,7 @@ public function ageRangeListing($f3) {
   $ageRangeID = $f3->get('GET.ageRangeID');
 
   // Database Connection
-  $db = new DB\SQL(
-    'mysql:host=localhost;port=3304;dbname=fsd10_xray;charset=UTF8', 'fsduser', 'myDBpw');
+  $db = new DB\SQL('mysql:host=localhost;port=3304;dbname=fsd10_xray;charset=UTF8', 'fsduser', 'myDBpw');
 
   // Fetch toys based on the specified AgeRangeID from the database
   $toys = $db->exec('SELECT * FROM toys WHERE AgeRangeID = ?', $ageRangeID);
@@ -86,7 +83,7 @@ public function ageRangeListing($f3) {
   // Pass the filtered toys to the view
   $f3->set('toys', $toys);
 
-  // Render the view (assuming 'toys.html' is your template file)
+  // Render the view 
   echo \Template::instance()->render('toys.html');
 }
 

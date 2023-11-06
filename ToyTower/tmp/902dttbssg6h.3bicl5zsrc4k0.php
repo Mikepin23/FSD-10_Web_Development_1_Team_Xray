@@ -45,12 +45,12 @@
     <br />
 
     <div class="button-container">
-      <a class="brand-button" href="<?= ($BASE) ?><?= (Base::instance()->alias('toyReadBrands')) ?>?categoryID=<?= ('2') ?>"><img src="img/brands/barbie.png" alt="Barbie"></a>
-      <a class="brand-button" href="<?= ($BASE) ?><?= (Base::instance()->alias('toyReadBrands')) ?>?categoryID=<?= ('5') ?>"><img src="img/brands/disney.png" alt="Disney"></a>
-      <a class="brand-button" href="<?= ($BASE) ?><?= (Base::instance()->alias('toyReadBrands')) ?>?categoryID=<?= ('1') ?>"><img src="img/brands/hasbro.png" alt="Hasbro"></a>
-      <a class="brand-button" href="<?= ($BASE) ?><?= (Base::instance()->alias('toyReadBrands')) ?>?categoryID=<?= ('3') ?>"><img src="img/brands/marvel.png" alt="Marvel"></a>
-      <a class="brand-button" href="<?= ($BASE) ?><?= (Base::instance()->alias('toyReadBrands')) ?>?categoryID=<?= ('7') ?>"><img src="img/brands/pawpatrol.png" alt="Paw Patrol"></a>
-      <a class="brand-button" href="<?= ($BASE) ?><?= (Base::instance()->alias('toyReadBrands')) ?>?categoryID=<?= ('10') ?>"><img src="img/brands/sonic.png" alt="Sonic"></a>
+      <a class="brand-button" href="<?= ($BASE) ?><?= (Base::instance()->alias('toyReadBrands')) ?>?brandID=<?= ('2') ?>"><img src="img/brands/barbie.png" alt="Barbie"></a>
+      <a class="brand-button" href="<?= ($BASE) ?><?= (Base::instance()->alias('toyReadBrands')) ?>?brandID=<?= ('5') ?>"><img src="img/brands/disney.png" alt="Disney"></a>
+      <a class="brand-button" href="<?= ($BASE) ?><?= (Base::instance()->alias('toyReadBrands')) ?>?brandID=<?= ('1') ?>"><img src="img/brands/hasbro.png" alt="Hasbro"></a>
+      <a class="brand-button" href="<?= ($BASE) ?><?= (Base::instance()->alias('toyReadBrands')) ?>?brandID=<?= ('3') ?>"><img src="img/brands/marvel.png" alt="Marvel"></a>
+      <a class="brand-button" href="<?= ($BASE) ?><?= (Base::instance()->alias('toyReadBrands')) ?>?brandID=<?= ('7') ?>"><img src="img/brands/pawpatrol.png" alt="Paw Patrol"></a>
+      <a class="brand-button" href="<?= ($BASE) ?><?= (Base::instance()->alias('toyReadBrands')) ?>?brandID=<?= ('10') ?>"><img src="img/brands/sonic.png" alt="Sonic"></a>
     </div>
 
     <br/>
@@ -62,12 +62,12 @@
     <br/>
 
     <div class="button-container">
-      <a class="age-button" href="<?= ($BASE) ?><?= (Base::instance()->alias('toyReadCategories')) ?>?categoryID=<?= ('1') ?>"><img src="img/ages/0-2.png" alt="Children ages 0-2"></a>
-      <a class="age-button" href="<?= ($BASE) ?><?= (Base::instance()->alias('toyReadCategories')) ?>?categoryID=<?= ('2') ?>"><img src="img/ages/3-4.png" alt="Children ages 3-4"></a>
-      <a class="age-button" href="<?= ($BASE) ?><?= (Base::instance()->alias('toyReadCategories')) ?>?categoryID=<?= ('3') ?>"><img src="img/ages/5-7.png" alt="Children ages 5-7"></a>
-      <a class="age-button" href="<?= ($BASE) ?><?= (Base::instance()->alias('toyReadCategories')) ?>?categoryID=<?= ('4') ?>"><img src="img/ages/8-10.png" alt="Children ages 3-4"></a>
-      <a class="age-button" href="<?= ($BASE) ?><?= (Base::instance()->alias('toyReadCategories')) ?>?categoryID=<?= ('5') ?>"><img src="img/ages/11-12.png" alt="Children ages 3-4"></a>
-      <a class="age-button" href="<?= ($BASE) ?><?= (Base::instance()->alias('toyReadCategories')) ?>?categoryID=<?= ('6') ?>"><img src="img/ages/13+.png" alt="Children ages 3-4"></a>
+      <a class="age-button" href="<?= ($BASE) ?><?= (Base::instance()->alias('toyReadAgeRanges')) ?>?ageRangeID=<?= ('1') ?>"><img src="img/ages/0-2.png" alt="Children ages 0-2"></a>
+      <a class="age-button" href="<?= ($BASE) ?><?= (Base::instance()->alias('toyReadAgeRanges')) ?>?ageRangeID=<?= ('2') ?>"><img src="img/ages/3-4.png" alt="Children ages 3-4"></a>
+      <a class="age-button" href="<?= ($BASE) ?><?= (Base::instance()->alias('toyReadAgeRanges')) ?>?ageRangeID=<?= ('3') ?>"><img src="img/ages/5-7.png" alt="Children ages 5-7"></a>
+      <a class="age-button" href="<?= ($BASE) ?><?= (Base::instance()->alias('toyReadAgeRanges')) ?>?ageRangeID=<?= ('4') ?>"><img src="img/ages/8-10.png" alt="Children ages 3-4"></a>
+      <a class="age-button" href="<?= ($BASE) ?><?= (Base::instance()->alias('toyReadAgeRanges')) ?>?ageRangeID=<?= ('5') ?>"><img src="img/ages/11-12.png" alt="Children ages 3-4"></a>
+      <a class="age-button" href="<?= ($BASE) ?><?= (Base::instance()->alias('toyReadAgeRanges')) ?>?ageRangeID=<?= ('6') ?>"><img src="img/ages/13+.png" alt="Children ages 3-4"></a>
     </div>
 </section>
 <br/>

@@ -1,7 +1,7 @@
 <?php 
 
 /**
- * Logic for categories
+ * Logic for admin
  */
 class AdminController{
 
@@ -9,7 +9,7 @@ class AdminController{
 	private $f3; // framework instance
 
 	/**
-	 * @param object $f3Var Intance of fat free framwwork
+	 * @param object $f3Var Instance of Fat-Free Framework
 	 */
 	public function __construct($f3Var){
 
@@ -26,7 +26,7 @@ class AdminController{
 	public function addToys($f3){
 
 		//set default values
-			//TODO undefined variables in template 
+			
 		$this->f3->set('toys', ['ToysID'=>'', 'ToyName'=>'', 'Price'=>'', 'Stock'=>'', 'ToyImage'=>'', 'BrandID'=>'', 'AgeRangeID'=>'', 'CategoryID'=>''] );
 
 		//show the view
@@ -35,7 +35,7 @@ class AdminController{
 	}
 
 	/**
-	 * Validate and created the date of a new cateogory
+	 * Validate and created the date of a new toy
 	 */
 	public function addSave($f3){
 		error_log("addSave method triggered"); // Check if this line is printed in the error log
@@ -43,14 +43,14 @@ class AdminController{
 		if ($this->validateForm()){ // data is good, save to db
 			// save to db
 			$this->model->addData();
-			// reroute to the listing page
+			// reroute to the same page
 			$f3->reroute($f3->get('SERVER.HTTP_REFERER'));
 	}
 
 	}
 
 		/**
-	 * Displays form to update given cateogory
+	 * Displays form to update given toy
 	 */
 	public function update(){
 		//get the id from the URL
@@ -59,7 +59,7 @@ class AdminController{
 		// fetch data from db
 		$dbResult = $this->model->getById( $getParamId );
 		
-		// TODO: check that dbResults actully contains something else reroute
+		// TODO: check that dbResults actually contains something else reroute
 
 		// set my category for the view
 		$this->f3->set("toys", $dbResult);
@@ -69,7 +69,7 @@ class AdminController{
 	}
 
 	/**
-	 * Validate and updates the date of given cateogory
+	 * Validate and updates the date of given toy
 	 */
 	public function updateSave($f3){
 		if ($this->validateForm()){ // data is good, save to db

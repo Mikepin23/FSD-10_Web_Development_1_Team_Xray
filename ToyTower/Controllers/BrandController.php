@@ -1,7 +1,7 @@
 <?php 
 
 /**
- * Logic for categories
+ * Logic for brands
  */
 class BrandController {
 
@@ -9,7 +9,7 @@ class BrandController {
 	private $f3; // framework instance
 
 	/**
-	 * @param object $f3Var Instance of fat free framework
+	 * @param object $f3Var Instance of Fat-Free Framework
 	 */
 	public function __construct($f3Var){
 
@@ -17,6 +17,7 @@ class BrandController {
 		$this->model = new Brand();
 
 		$this->f3->set('pageTitle', "Brands | ToyTower"); // default page title
+		$this->f3->set('error', ""); //default error message
 		
 	}
 
@@ -25,10 +26,10 @@ class BrandController {
 	 */
 	public function listing(){
 
-		// fetch the categories from the db
+		// fetch the brands from the db
 		$brands = $this->model->all();
 
-		// set my category for the view
+		// set the brands for the view
 		$this->f3->set('brands', $brands);
 		
 		// show the view
