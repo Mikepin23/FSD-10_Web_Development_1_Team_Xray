@@ -25,18 +25,10 @@ h1 {
   box-sizing: border-box;
 }
 
-/* Remove default margin */
-/* #toy-categories,
-h2,
-p {
-  margin: 0;
-} */
-
 /* GLOBAL STYLES */
 #toy-categories {
   display: flex;
   justify-content: space-between;
-  /* height: 100vh; */
   margin: auto auto 40px auto;
 }
 

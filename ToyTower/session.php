@@ -1,3 +1,5 @@
+<!-- session start can be called wherever it's needed -->
+
 <?php
 session_start();
 

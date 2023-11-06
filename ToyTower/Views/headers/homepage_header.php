@@ -1,7 +1,5 @@
 <?php
-
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,6 +9,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/homepage_style.css" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <!-- calling the script for the carrousel -->
     <script src="homepage.js"></script>
   
     <!-- Bootstrap CSS Link -->
@@ -56,15 +55,6 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
-              <!-- <li class="nav-item">
-                <a class="navbar-logo" href="#">
-                  <img
-                    src="img\ToyTower_Logo(3).png"
-                    alt="ToyTower Logo"
-                    height="100px"
-                  />
-                </a>
-              </li> -->
               <li class="nav-item nav-justified">
                 <a class="nav-link n" href="{{ @BASE }}{{ 'catRead' | alias }}">Categories</a>
               </li>

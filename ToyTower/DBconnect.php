@@ -1,3 +1,4 @@
+<!-- db connection to call whenever it's needed -->
 <?php
 $servername = "localhost";
 $port = "3304";

@@ -1,9 +1,5 @@
 <?php
-
-
-
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -56,15 +52,6 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
-              <!-- <li class="nav-item">
-                <a class="navbar-logo" href="#">
-                  <img
-                    src="img\ToyTower_Logo(3).png"
-                    alt="ToyTower Logo"
-                    height="100px"
-                  />
-                </a>
-              </li> -->
               <li class="nav-item nav-justified">
                 <a class="nav-link n" href="{{ @BASE }}{{ 'catRead' | alias }}">Categories</a>
               </li>

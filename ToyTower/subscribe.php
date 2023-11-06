@@ -1,6 +1,7 @@
 <?php
 require 'DBconnect.php';
 
+// if the email variable is set, it gets submitted to the db in the table email_subscriber
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if(isset($_POST['email'])){
         // Prepare statement
@@ -13,6 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             header("Location: /ToyTower/");
             exit();
         } else {
+            // on error
             echo "There was an error. Please try again.";
         }
 
