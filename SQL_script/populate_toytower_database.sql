@@ -17,6 +17,7 @@ VALUES
 
 INSERT INTO AgeRanges (`Range`, AgeRangeImage)
 VALUES 
+<<<<<<< Updated upstream
 ('0 - 2 years', '../ToyTower/img/ages/0-2.png'),
 ('3 - 4 years', '../ToyTower/img/ages/3-4.png'),
 ('5 - 7 years', '../ToyTower/img/ages/5-7.png'),
@@ -24,6 +25,15 @@ VALUES
 ('11 - 12 years', '../ToyTower/img/ages/11-12.png'),
 ('13+ years', '../ToyTower/img/ages/13+.png')
 -- ('All Ages')
+=======
+('0 - 2 years', '../ToyTower/img/ages/0-2.png', 'Screamers, sleep-thieves, and diaper dictators.'),
+('3 - 4 years', '../ToyTower/img/ages/3-4.png', 'Tiny tornadoes with sticky fingers, where mess is an art form.'),
+('5 - 7 years', '../ToyTower/img/ages/5-7.png', 'The littlest terrors, with the biggest opinions.'),
+('8 - 10 years', '../ToyTower/img/ages/8-10.png', 'The age where boundless energy meets questionable decisions.'),
+('11 - 12 years', '../ToyTower/img/ages/11-12.png', 'Mastering eye rolls and growing pains with flair.'),
+('13+ years', '../ToyTower/img/ages/13+.png', 'Hormones, drama, and the know-it-all years.')
+
+>>>>>>> Stashed changes
 ;
 
 INSERT INTO Categories (CategoryName, CategoryImage)

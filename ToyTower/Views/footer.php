@@ -2,15 +2,17 @@
 require 'DBconnect.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if(isset($_POST['email'])){
-      // Prepare statement
+      // Prepare statement to insert into the table
       $stmt = $conn->prepare("INSERT INTO email_subscriber (EmailAddress) VALUES (?)");
       $stmt->bind_param("s", $_POST['email']);
 
       // Execute the statement
       if ($stmt->execute()) {
-          echo "You have been subscribed!";
+        // on success the user sees this  
+        echo "You have been subscribed!";
       } else {
-          echo "There was an error. Please try again.";
+        // on fail the user sees this  
+        echo "There was an error. Please try again.";
       }
 
       $stmt->close();
@@ -25,7 +27,7 @@ $conn->close();
     <div class="container">
       <div class="row">
         <div class="col-12 col-md-6 offset-md-3 text-center">
-          <h2 class="mb-4">Subscribe to Our Newsletter</h2>
+          <h2 class="mb-4">Subscribe to Our Newsletter</h2>         
           <form method="POST" action="subscribe.php">
             <div class="form-group d-flex">
                 <input type="email" class="form-control mr-2" name="email" id="email" placeholder="Enter your email" required />

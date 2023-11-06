@@ -2,8 +2,10 @@
 require 'DBconnect.php';
 require 'session.php';
 
+//Checking if anything was input into the boxes. otherwise it wont work
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['username']) && isset($_POST['password'])) {
-    // Prepare statement
+    
+    // If they were full they get bound to variables
     $stmt = $conn->prepare("SELECT * FROM Users WHERE Username=? AND UserPass=?");
     $stmt->bind_param("ss", $_POST['username'], $_POST['password']);
 
@@ -13,10 +15,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['username']) && isset($
     // Get the result
     $result = $stmt->get_result();
 
+    // Checking if there is a user in the db with those credentials
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
 
-        // Set session variables
+        // Setting all the user session variables
         $_SESSION['user'] = $row['Username'];
         $_SESSION['user_id'] = $row['UserID'];
         $_SESSION['first_name'] = $row['UserFN'];
@@ -26,10 +29,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['username']) && isset($
         $_SESSION['postal_code'] = $row['PostalCode'];
 
 
-        
-        header('Location: hp.php'); // TODO: Need to change to just "/" when uploading it to the remote server
+        // redirecting to the homepage if successful
+        header('Location: /ToyTower/');
         exit;
     } else {
+        // redirecting here to try again
         $_SESSION['error'] = 'Invalid username / password combo. Please try again.';
         header('Location: /ToyTower/login');
         exit;

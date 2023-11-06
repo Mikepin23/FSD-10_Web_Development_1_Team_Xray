@@ -1,3 +1,5 @@
+<!-- session start for calling when needed -->
+
 <?php
 session_start();
 

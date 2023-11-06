@@ -21,7 +21,7 @@ class SignUpController{
 	}
 
 	/**
-	 * Displays form to create a new
+	 * Displays form to create a new create account page
 	 */
 	public function add($f3){
 		$f3->set("pageTitle", "Create Account | ToyTower");
